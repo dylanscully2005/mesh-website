@@ -1,6 +1,6 @@
 // src/pages/Support.tsx
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, Mail, Clock, FileQuestion, MessageSquare, AlertCircle } from 'lucide-react';
+import { Hexagon, ArrowLeft, Mail, Clock, FileQuestion, MessageSquare, AlertCircle, Phone } from 'lucide-react';
 
 export default function Support() {
   const faqs = [
@@ -80,18 +80,33 @@ export default function Support() {
               </p>
 
               <div className="space-y-6 mb-8">
+                {/* Email Block */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-[#1800ad]/20 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-[#6042ff]" />
                   </div>
                   <div>
                     <div className="text-xs text-[#888] font-bold uppercase tracking-wider mb-1">Email Us</div>
-                    <a href="mailto:support@meshservicesuk.com" className="text-white font-semibold hover:text-[#6042ff] transition-colors">
+                    <a href="mailto:support@meshservicesuk.com" className="text-white font-semibold hover:text-[#6042ff] transition-colors block">
                       support@meshservicesuk.com
                     </a>
                   </div>
                 </div>
 
+                {/* Phone Block */}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-full bg-[#1800ad]/20 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-[#6042ff]" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-[#888] font-bold uppercase tracking-wider mb-1">Call Us (Urgent)</div>
+                    <a href="tel:02034111813" className="text-white font-semibold hover:text-[#6042ff] transition-colors block">
+                      020 3411 1813
+                    </a>
+                  </div>
+                </div>
+
+                {/* Operating Hours Block */}
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-white" />
