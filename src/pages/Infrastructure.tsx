@@ -1,127 +1,189 @@
 // src/pages/Infrastructure.tsx
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, Server, Database, Radio, MonitorPlay, Code2, ShieldCheck } from 'lucide-react';
+import { Hexagon, ArrowLeft, Server, Database, Radio, MonitorPlay, Code2, ShieldCheck, Globe, Activity } from 'lucide-react';
 
 export default function Infrastructure() {
   return (
-    <div className="min-h-screen bg-[#050505] text-[#ededed] font-sans selection:bg-mesh-brand selection:text-white pb-20">
+    <div className="min-h-screen bg-[#050505] text-zinc-300 font-sans selection:bg-[#1800ad] selection:text-white pb-20">
       
-      {/* Minimal Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
+      {/* Navbar - Matched to Home.tsx style */}
+      <nav className="fixed top-0 w-full z-50 bg-[#050505]/70 backdrop-blur-2xl border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Hexagon fill="#1800ad" className="text-mesh-brand w-6 h-6" />
-            <span className="text-base font-bold tracking-tight text-white">Mesh Services UK</span>
+          <Link to="/" className="flex items-center gap-2 group cursor-pointer">
+            <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6 group-hover:scale-110 transition-transform" />
+            <span className="text-base font-bold tracking-tight text-zinc-100">Mesh Services UK</span>
           </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#888888]">
-            <span className="text-white">Infrastructure</span>
-            <Link to="/economics" className="hover:text-white transition-colors">Economics</Link>
-            <Link to="/policies" className="hover:text-white transition-colors">Compliance</Link>
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
+            <span className="text-white font-bold">Infrastructure</span>
+            <Link to="/economics" className="hover:text-zinc-200 transition-colors">Economics</Link>
+            <Link to="/policies" className="hover:text-zinc-200 transition-colors">Compliance</Link>
+            <Link to="/about" className="hover:text-zinc-200 transition-colors">Our Story</Link>
+            <Link to="/support" className="hover:text-zinc-200 transition-colors">Support</Link>
           </div>
-          <Link to="/" className="text-sm font-medium text-[#888] flex items-center gap-2 hover:text-white transition-colors md:hidden">
+          <Link to="/" className="text-sm font-bold text-zinc-400 flex items-center gap-2 hover:text-white transition-colors bg-white/5 px-4 py-1.5 rounded-lg border border-white/10 md:hidden">
             <ArrowLeft className="w-4 h-4" /> Back
           </Link>
+          <div className="hidden md:block">
+            <Link to="/" className="text-sm font-bold text-zinc-400 flex items-center gap-2 hover:text-white transition-colors">
+              <ArrowLeft className="w-4 h-4" /> Back to Home
+            </Link>
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
       <main className="pt-32 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col items-start mt-12 mb-20">
-          <div className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[#888] text-xs font-bold uppercase tracking-widest mb-8 flex items-center gap-2">
-            <Server className="w-3 h-3 text-mesh-brand" /> Network Architecture
+          <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-xs font-bold tracking-wide mb-8 flex items-center gap-2 shadow-lg">
+            <Server className="w-3 h-3 text-[#3b1df2]" /> Bare-Metal Philosophy
           </div>
           
-          <h1 className="text-5xl md:text-[72px] font-bold tracking-tighter mb-6 leading-[1.05] text-white max-w-4xl">
-            Engineered for fidelity. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[#1800ad]">Built to scale globally.</span>
+          <h1 className="text-5xl md:text-[72px] font-extrabold tracking-tighter mb-6 leading-[1.05] text-white max-w-4xl">
+            No fluff. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-400 to-[#1800ad]">Just raw throughput.</span>
           </h1>
           
-          <p className="text-lg text-[#888] max-w-2xl mb-10 font-medium leading-relaxed">
-            Mesh Services UK utilizes a modern edge-delivery network to ensure zero-latency playback. From our Supabase backend to our React-powered interfaces, every line of code is optimized for the creator class.
+          <p className="text-lg text-zinc-400 max-w-2xl mb-10 font-medium leading-relaxed">
+            We hate slow websites and buffered streams as much as you do. Mesh is built on an aggressive edge-delivery architecture that puts your art physically closer to your audience, stripping out the middleware that slows down the web.
           </p>
+        </div>
+
+        {/* Global Network Section (UPDATED TO ACTUAL SPECS) */}
+        <div className="mb-4">
+          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-[#0a0a0a] to-[#050505] border border-white/10 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#1800ad]/5 blur-[120px] rounded-full pointer-events-none"></div>
+            
+            <div className="flex items-center gap-3 mb-8 relative z-10">
+              <Globe className="w-8 h-8 text-[#3b1df2]" />
+              <h3 className="text-3xl font-bold text-white tracking-tight">Global Routing Topology</h3>
+            </div>
+            
+            <p className="text-zinc-400 font-medium leading-relaxed mb-10 max-w-3xl relative z-10">
+              Your audience shouldn't have to wait for data to cross an ocean. Our hardware is strategically placed in key global regions to ensure zero-latency playback and instant UI responsiveness, no matter where a stream is initiated.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+              {/* Region 1: Ireland (UK/EU) */}
+              <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/5 hover:border-[#1800ad]/50 transition-colors">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-mono font-bold text-[#3b1df2] bg-[#1800ad]/20 px-2 py-1 rounded">NODE: IRE-01</span>
+                  <Activity className="w-4 h-4 text-green-400" />
+                </div>
+                <h4 className="text-xl font-bold text-zinc-100 mb-2">UK & West Europe</h4>
+                <p className="text-sm text-zinc-400 font-medium leading-relaxed">
+                  The Mothership. Located in Ireland, this cluster handles our primary Postgres database architecture, core authentication, and media ingestion for both the UK and mainland Europe.
+                </p>
+              </div>
+
+              {/* Region 2: Northern California (US) */}
+              <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/5 hover:border-white/20 transition-colors">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-mono font-bold text-zinc-400 bg-white/5 px-2 py-1 rounded">NODE: NCA-01</span>
+                  <Activity className="w-4 h-4 text-green-400" />
+                </div>
+                <h4 className="text-xl font-bold text-zinc-100 mb-2">North America</h4>
+                <p className="text-sm text-zinc-400 font-medium leading-relaxed">
+                  Based in Northern California, this node acts as a heavy edge-caching tier to ensure smooth, high-bandwidth delivery for audiences across the United States and Canada.
+                </p>
+              </div>
+
+              {/* Region 3: Rest of World */}
+              <div className="p-6 rounded-2xl bg-zinc-900/60 border border-white/5 hover:border-white/20 transition-colors">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-xs font-mono font-bold text-zinc-400 bg-white/5 px-2 py-1 rounded">EDGE ROUTING</span>
+                  <Activity className="w-4 h-4 text-green-400" />
+                </div>
+                <h4 className="text-xl font-bold text-zinc-100 mb-2">Rest of the World</h4>
+                <p className="text-sm text-zinc-400 font-medium leading-relaxed">
+                  Every request outside our primary zones is automatically ping-routed to whichever server (Ireland or California) is physically closer to the user, strictly minimizing latency.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Tech Stack Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
           
           {/* Audio Engine */}
-          <div className="p-10 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/20 transition-colors">
-            <Radio className="w-8 h-8 text-mesh-brand mb-6" />
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Lossless Audio Engine</h3>
-            <p className="text-[#888] font-medium leading-relaxed mb-6">
-              Standard streaming platforms compress art into muddy MP3s. The Mesh Audio Hub natively supports direct `.WAV` and `.FLAC` uploads, delivering master-quality, high-fidelity audio directly to the listener's hardware.
+          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-[#1800ad]/30 transition-all duration-300">
+            <Radio className="w-8 h-8 text-[#3b1df2] mb-6" />
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Uncompressed Audio Pipeline</h3>
+            <p className="text-zinc-400 font-medium leading-relaxed mb-6">
+              Standard streaming platforms compress art into muddy MP3s to save on server costs. We don't. The Mesh Audio Hub natively ingests and streams `.WAV` and `.FLAC` files, delivering exact studio-master fidelity directly to the listener.
             </p>
-            <div className="flex gap-2">
-              <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-[#888] font-mono">.WAV</span>
-              <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-[#888] font-mono">.FLAC</span>
-              <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-[#888] font-mono">320kbps fallback</span>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-300 font-mono font-semibold">.WAV</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-300 font-mono font-semibold">.FLAC</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-500 font-mono">320kbps fallback</span>
             </div>
           </div>
 
           {/* Video Engine */}
-          <div className="p-10 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/20 transition-colors relative overflow-hidden">
-            <MonitorPlay className="w-8 h-8 text-white mb-6" />
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">MeshTV Delivery (2027)</h3>
-            <p className="text-[#888] font-medium leading-relaxed mb-6">
-              Our upcoming video architecture is being designed to handle massive throughput. Delivering 4K HDR independent cinema requires heavy edge-caching and adaptive bitrate streaming to prevent buffering.
+          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-white/20 transition-all duration-300">
+            <MonitorPlay className="w-8 h-8 text-zinc-200 mb-6" />
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">The 4K Video Grid (2027)</h3>
+            <p className="text-zinc-400 font-medium leading-relaxed mb-6">
+              Delivering independent cinema in true 4K HDR requires serious horsepower. Our upcoming video architecture utilizes aggressive chunked HLS streaming and adaptive bitrates so your films never buffer, even on bad connections.
             </p>
-            <div className="flex gap-2">
-              <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-[#888] font-mono">4K HDR</span>
-              <span className="px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-[#888] font-mono">HLS Streaming</span>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-300 font-mono font-semibold">4K HDR</span>
+              <span className="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-xs text-zinc-300 font-mono font-semibold">HLS Edge Streaming</span>
             </div>
           </div>
 
           {/* Backend & Auth */}
-          <div className="p-10 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/20 transition-colors">
-            <Database className="w-8 h-8 text-[#4ADE80] mb-6" />
+          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-white/20 transition-all duration-300">
+            <Database className="w-8 h-8 text-green-400 mb-6" />
             <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Supabase Architecture</h3>
-            <p className="text-[#888] font-medium leading-relaxed">
-              Our entire database, user authentication, and media storage is powered by Supabase. This provides us with bank-grade Postgres security, Row Level Security (RLS) policies to protect creator data, and ultra-fast real-time database subscriptions.
+            <p className="text-zinc-400 font-medium leading-relaxed">
+              We rely on Supabase to power our backend. This isn't just about speed—it gives us bank-grade PostgreSQL stability, strict Row Level Security (RLS) to ensure creators strictly own their data, and real-time socket subscriptions for live UI updates.
             </p>
           </div>
 
           {/* Frontend */}
-          <div className="p-10 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/20 transition-colors">
-            <Code2 className="w-8 h-8 text-[#61DAFB] mb-6" />
+          <div className="p-8 md:p-10 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-white/20 transition-all duration-300">
+            <Code2 className="w-8 h-8 text-sky-400 mb-6" />
             <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">React & Vercel Edge</h3>
-            <p className="text-[#888] font-medium leading-relaxed">
-              The Mesh network frontend is built on highly optimized React architecture, styled with Tailwind CSS, and deployed via Vercel. This guarantees instant page loads, smooth transitions, and a flawless user experience across all devices.
+            <p className="text-zinc-400 font-medium leading-relaxed">
+              The Mesh interface is built in React, styled purely with Tailwind, and deployed to Vercel's Edge Network. We cache UI components globally so the platform feels like a native app: instant page loads, zero layout shifts, and flawless mobile scaling.
             </p>
           </div>
 
         </div>
 
         {/* Security Banner */}
-        <div className="p-10 rounded-2xl bg-[#111] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="p-8 md:p-10 rounded-3xl bg-[#1800ad]/10 border border-[#1800ad]/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
           <div>
-            <div className="flex items-center gap-2 text-white/80 font-bold mb-3 text-sm uppercase tracking-wide">
-              <ShieldCheck className="w-5 h-5 text-mesh-brand" /> Enterprise Security
+            <div className="flex items-center gap-2 text-white/80 font-bold mb-3 text-sm uppercase tracking-wider">
+              <ShieldCheck className="w-5 h-5 text-[#3b1df2]" /> Paranoid-Level Security
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">Your data is locked down.</h3>
-            <p className="text-[#888] max-w-2xl font-medium">
-              We employ strict CORS policies, Row Level Security, and JWT authentication tokens. We do not store raw passwords, and our media buckets require authorized API keys to prevent hotlinking and bandwidth theft.
+            <p className="text-zinc-300 max-w-2xl font-medium leading-relaxed">
+              We employ strict CORS policies and JWT auth tokens. We never store raw passwords, and our media storage buckets require highly-expiring API keys to completely prevent hotlinking, piracy, and bandwidth theft of your art.
             </p>
           </div>
-          <Link to="/policies">
-            <button className="whitespace-nowrap px-6 py-3 border border-white/10 text-white font-bold rounded-lg hover:bg-white/5 transition-colors text-sm">
-              Review Compliance Data
+          <Link to="/policies" className="flex-shrink-0">
+            <button className="whitespace-nowrap px-6 py-3 bg-white text-[#1800ad] font-bold rounded-xl hover:bg-zinc-200 hover:scale-105 transition-all text-sm shadow-lg">
+              Review Security Policies
             </button>
           </Link>
         </div>
 
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-white/5 mt-20 pt-10">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-[#666] font-medium text-sm">
-            © 2026 Mesh Services UK.
+      {/* Footer - Matched to Home.tsx style */}
+      <footer className="border-t border-white/5 mt-20 pt-10 pb-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
+            © {new Date().getFullYear()} Mesh Services UK. <br className="md:hidden" />
+            <span className="hidden md:inline"> | </span> 
+            Run with purpose by Dylan Scully.
           </div>
-          <div className="flex gap-6 text-sm font-medium text-[#666]">
-            <Link to="/policies" className="hover:text-white transition-colors">Terms</Link>
-            <Link to="/policies" className="hover:text-white transition-colors">Privacy</Link>
-            <Link to="/policies" className="hover:text-white transition-colors">DMCA</Link>
-            <a href="mailto:support@meshservicesuk.com" className="hover:text-white transition-colors">Contact</a>
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-zinc-500">
+            <Link to="/policies" className="hover:text-zinc-200 transition-colors">Terms & Privacy</Link>
+            <Link to="/policies" className="hover:text-zinc-200 transition-colors">DMCA</Link>
+            <a href="mailto:support@meshservicesuk.com" className="hover:text-zinc-200 transition-colors">Contact</a>
           </div>
         </div>
       </footer>

@@ -189,7 +189,7 @@ export default function Bot() {
       <footer className="border-t border-white/5 mt-20 pt-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-[#666] font-medium text-sm">
-            © 2026 Mesh Services UK. Operational in Runcorn, UK.
+            © 2026 Mesh Services UK.
           </div>
           <div className="flex gap-6 text-sm font-medium text-[#666]">
             <Link to="/policies" className="hover:text-white transition-colors">Terms</Link>
