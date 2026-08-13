@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, FileText, ShieldCheck, Lock, Users } from 'lucide-react';
+import { Hexagon, ArrowLeft, FileText, ShieldCheck, Lock, Users, Tv, CreditCard } from 'lucide-react';
 
 export default function Policies() {
   return (
@@ -30,6 +30,8 @@ export default function Policies() {
             <a href="#privacy-us" className="text-sm font-medium text-[#888] hover:text-white transition-colors">US Privacy Policy</a>
             <a href="#dmca" className="text-sm font-medium text-[#888] hover:text-white transition-colors">DMCA & Copyright</a>
             <a href="#community" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Community Guidelines</a>
+            <a href="#mesh-tv" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Mesh TV Terms of Use</a>
+            <a href="#subscriptions" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Paid Subscriptions & TV Pro</a>
             
             <div className="mt-8 p-4 rounded-xl bg-white/5 border border-white/10">
               <h4 className="text-xs font-bold text-white uppercase mb-2">Need Legal Help?</h4>
@@ -83,11 +85,6 @@ export default function Policies() {
               <li>Attempt to reverse-engineer, exploit, or disrupt Mesh infrastructure or Supabase databases.</li>
               <li>Harass, stalk, dox, or transmit malicious code.</li>
             </ul>
-
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">5. Governing Law</h3>
-            <p className="text-[#888] leading-relaxed mb-4">
-              For users in the UK and EEA, these terms are governed by the laws of England and Wales. For users in the United States, these terms are governed by the laws of the State of California without regard to conflict of law principles.
-            </p>
           </section>
 
           {/* Section: UK & EU Privacy Policy */}
@@ -96,14 +93,23 @@ export default function Policies() {
               <ShieldCheck className="w-5 h-5 text-[#3b1df2]" />
               <h2 className="text-2xl font-bold text-white">UK & EU Privacy Policy</h2>
             </div>
-            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 4/09/2026 | Operator: Mesh Services UK and EU (Dylan Scully)</p>
+            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 4/09/2026</p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Who We Are</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh Services UK and EU is operated by Dylan Scully trading as "Mesh" in the United Kingdom. Contact for privacy inquiries: <a href="mailto:Legal@meshservicesuk.com" className="text-[#3b1df2] underline">Legal@meshservicesuk.com</a>.
+              Mesh Services UK and EU is operated by Dylan Scully trading as "Mesh," United Kingdom. Contact us about privacy at Legal@meshservicesuk.com. Our ICO Registration Number is ZC218381.
             </p>
 
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Information Collection & Lawful Basis</h3>
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. What Mesh Is</h3>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li><strong className="text-white">Servers:</strong> Community spaces with text channels, similar to Discord.</li>
+              <li><strong className="text-white">Voice calls:</strong> Real-time voice, connected peer-to-peer using WebRTC.</li>
+              <li><strong className="text-white">Direct messages:</strong> Private one-to-one and group messaging.</li>
+              <li><strong className="text-white">Mesh Music:</strong> A hub where indie artists upload and stream music, with royalty payouts.</li>
+              <li><strong className="text-white">Mesh TV:</strong> A platform for indie studios to upload and stream video content.</li>
+            </ul>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. Information Collection & Lawful Basis</h3>
             <div className="overflow-x-auto mb-6">
               <table className="w-full text-left text-xs border border-white/10 rounded-lg">
                 <thead className="bg-white/5 text-white uppercase font-bold border-b border-white/10">
@@ -115,57 +121,86 @@ export default function Policies() {
                 </thead>
                 <tbody className="divide-y divide-white/5 text-[#888]">
                   <tr>
-                    <td className="p-3 font-semibold text-white">Account Info (Email, Username, Hashed Password)</td>
-                    <td className="p-3">Account setup & security</td>
+                    <td className="p-3 font-semibold text-white">Email, username, hashed password</td>
+                    <td className="p-3">Create and secure your account</td>
                     <td className="p-3">Contract</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Server Messages & DMs</td>
-                    <td className="p-3">Operate community channels & messaging</td>
+                    <td className="p-3 font-semibold text-white">Server membership, roles, text channel messages</td>
+                    <td className="p-3">Operate servers and communities</td>
                     <td className="p-3">Contract</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Voice Call Signaling Data</td>
-                    <td className="p-3">Connect peer-to-peer WebRTC calls</td>
+                    <td className="p-3 font-semibold text-white">Direct messages (content)</td>
+                    <td className="p-3">Deliver private messages</td>
                     <td className="p-3">Contract</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Call Audio</td>
-                    <td className="p-3">Not collected (Direct WebRTC peer-to-peer)</td>
+                    <td className="p-3 font-semibold text-white">Call signaling data (who called whom, when, duration)</td>
+                    <td className="p-3">Connect voice calls</td>
+                    <td className="p-3">Contract</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-semibold text-white">Call audio itself</td>
+                    <td className="p-3">Not collected. WebRTC connects devices directly; Mesh's servers help set up the connection but do not receive, transmit through, record, or store the audio.</td>
                     <td className="p-3">N/A</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Music/Video Play History</td>
-                    <td className="p-3">Calculate creator royalties & recommendations</td>
-                    <td className="p-3">Contract / Legitimate Interest</td>
+                    <td className="p-3 font-semibold text-white">Music/video play history</td>
+                    <td className="p-3">Calculate creator royalties; power recommendations</td>
+                    <td className="p-3">Contract (royalties) / Legitimate interests (recommendations)</td>
                   </tr>
                   <tr>
-                    <td className="p-3 font-semibold text-white">Telemetry & Diagnostics</td>
-                    <td className="p-3">App performance & bug diagnosis</td>
-                    <td className="p-3">Legitimate Interest / Consent</td>
+                    <td className="p-3 font-semibold text-white">Uploaded music, video, and metadata</td>
+                    <td className="p-3">Host and stream creator content</td>
+                    <td className="p-3">Contract</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-semibold text-white">App telemetry</td>
+                    <td className="p-3">Diagnose issues, improve reliability</td>
+                    <td className="p-3">Legitimate interests, or consent where required</td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 font-semibold text-white">Payment routing information (creators)</td>
+                    <td className="p-3">Pay out earnings</td>
+                    <td className="p-3">Contract / Legal obligation</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. Retention Schedule</h3>
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">4. Retention Schedule</h3>
             <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
-              <li><strong className="text-white">Account Data:</strong> Retained while active, plus 7 days post-deletion.</li>
-              <li><strong className="text-white">Text Messages & DMs:</strong> Retained until deleted by user/admin or 7 days after account deletion.</li>
-              <li><strong className="text-white">Call Signaling Logs:</strong> Retained for 7 days.</li>
-              <li><strong className="text-white">Uploaded Media (Music/TV):</strong> Retained while active, plus 14 days following removal.</li>
-              <li><strong className="text-white">Financial & Royalty Records:</strong> Retained for 7 years for regulatory compliance.</li>
-              <li><strong className="text-white">App Telemetry:</strong> Retained for 30 days unless non-consent is toggled.</li>
+              <li><strong className="text-white">Account data:</strong> While active, plus 7 Days after deletion.</li>
+              <li><strong className="text-white">Server text messages:</strong> Retained until deleted by You, Server admins, Account deletion + 7 days.</li>
+              <li><strong className="text-white">Direct messages:</strong> Retained Until Account Deletion + 7 Days.</li>
+              <li><strong className="text-white">Call signaling logs:</strong> Retained for 7 Days.</li>
+              <li><strong className="text-white">Uploaded music/video:</strong> While active and published, plus 14 days after removal from the app.</li>
+              <li><strong className="text-white">Play/watch history & royalty records:</strong> 7 years, for financial record-keeping.</li>
+              <li><strong className="text-white">App telemetry:</strong> 30 days unless user does not consent.</li>
             </ul>
 
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">4. Data Hosting & International Transfers</h3>
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">5. Strict Data Care Mode</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Primary European database infrastructure is hosted by Supabase in the <code className="text-white font-mono bg-white/10 px-1 py-0.5 rounded">eu-west-1</code> region (Ireland). Data transfers from the UK to the EEA are conducted under UK government adequacy determinations.
+              Mesh features a "Strict Data Care" mode in Account Settings. When toggled ON:
+            </p>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li>Non-essential application state logs are routinely purged.</li>
+              <li>Your session telemetry is anonymized.</li>
+              <li>Your Discover recommendations rely on on-device processing rather than cloud profiling.</li>
+            </ul>
+            <p className="text-[#888] leading-relaxed mb-4">
+              With Strict Data Care OFF, recommendations use algorithmic curation based on your listening/watching history and telemetry.
             </p>
 
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">5. UK GDPR Rights</h3>
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">6. Data Hosting & International Transfers</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Under UK GDPR, you hold rights to Access, Rectify, Erase, Restrict, and Object to your data processing. You may manage these rights directly within Account Settings or by lodging requests to <a href="mailto:Legal@meshservicesuk.com" className="text-[#3b1df2] underline">Legal@meshservicesuk.com</a>. You have the right to lodge complaints with the Information Commissioner's Office (ICO).
+              We do not sell your personal data to advertisers. We share data only with trusted service providers, strictly to run Mesh, including Supabase (database hosting), WebRTC infrastructure/TURN-STUN providers, and Stripe Billing. Our database is hosted by Supabase in the eu-west-1 region (Ireland), within the European Economic Area (EEA). For UK users, this means your data is transferred from the UK to the EEA. The UK government treats all EEA member states as adequate jurisdictions, so this transfer takes place without needing additional safeguards. 
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">7. UK GDPR Rights & Age Requirements</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Under the UK GDPR, you have the right to Access, Rectify, Erase, Restrict, Object to processing, Data portability, and Withdraw consent. You can manage this directly in Account Settings or contact Legal@meshservicesuk.com. You can lodge a complaint with the UK Information Commissioner's Office (ICO) at ico.org.uk or 0303 123 1113. Mesh is intended for users 18 and over in the UK, Ireland, Germany, Netherlands, France, and Spain.
             </p>
           </section>
 
@@ -175,26 +210,34 @@ export default function Policies() {
               <Lock className="w-5 h-5 text-[#3b1df2]" />
               <h2 className="text-2xl font-bold text-white">US Privacy Policy</h2>
             </div>
-            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 10/08/2026 | Operator: Mesh Services US (Dylan Scully)</p>
+            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 10/08/2026</p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Who We Are & Infrastructure Location</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh Services US is operated by Dylan Scully. For US-based accounts, data is hosted on infrastructure managed by Supabase in the <code className="text-white font-mono bg-white/10 px-1 py-0.5 rounded">us-west-1</code> region (Northern California). Privacy Contact: <a href="mailto:meshuslegal@meshservicesuk.info" className="text-[#3b1df2] underline">meshuslegal@meshservicesuk.info</a>.
+              Mesh is operated by Mesh Services US Provided by Dylan Scully. For users in the United States, your data is securely stored on our infrastructure hosted by Supabase in the US-WEST-1 region (Northern California). You can contact us about privacy at meshuslegal@meshservicesuk.info.
             </p>
 
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Strict Data Care Mode</h3>
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Data Practices & COPPA Compliance</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh offers a "Strict Data Care" mode within Account Settings. When activated:
+              We collect data to operate servers, connect voice calls via WebRTC (we do not receive, transmit through, record, or store the audio), deliver private messages, and calculate creator royalties. Mesh is strictly intended for users 18 and over, and we will utilize age-verification systems during onboarding to restrict access to anyone under 18.
+            </p>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Mesh features a "Strict Data Care" mode where non-essential application state logs are routinely purged, your session telemetry is anonymized, and your Discover recommendations rely on on-device processing rather than cloud profiling.
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. US State Privacy Rights (CCPA/CPRA)</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), as well as applicable privacy laws in other US states, you have the right to:
             </p>
             <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
-              <li>Non-essential application state logs are routinely purged.</li>
-              <li>Session telemetry is completely anonymized.</li>
-              <li>Discover recommendations rely on on-device processing rather than cloud profiling.</li>
+              <li><strong className="text-white">Access/Know:</strong> Request disclosure of the specific pieces and categories of personal information we have collected about you.</li>
+              <li><strong className="text-white">Delete:</strong> Request the deletion of your personal data.</li>
+              <li><strong className="text-white">Correct:</strong> Request correction of inaccurate personal data.</li>
+              <li><strong className="text-white">Opt-out of Sale or Sharing:</strong> We do not sell your personal data to advertisers.</li>
+              <li><strong className="text-white">Non-Discrimination:</strong> Receive equal service and pricing regardless of exercising your privacy rights.</li>
             </ul>
-
-            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. US State Rights (CCPA / CPRA)</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Under state privacy laws such as CCPA/CPRA, residents have the right to request access to, deletion of, and correction of personal information, as well as the right to opt out of data sales/sharing. Mesh does not sell personal data to third-party advertisers. Users can exercise CCPA data rights using automated export/delete tools in Account Settings or by emailing <a href="mailto:meshuslegal@meshservicesuk.info" className="text-[#3b1df2] underline">meshuslegal@meshservicesuk.info</a>.
+              Manage most of this directly via our CCPA-aligned data export/delete tooling in Account Settings, or contact meshuslegal@meshservicesuk.info.
             </p>
           </section>
 
@@ -207,7 +250,7 @@ export default function Policies() {
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Compliance</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh respects intellectual property rights and complies with the US Digital Millennium Copyright Act (DMCA), UK Copyright, Designs and Patents Act 1988, and EU Copyright regulations.
+              Mesh respects intellectual property rights and complies with the US Digital Millennium Copyright Act (DMCA), UK Copyright, Designs and Patents Act 1988, and EU Copyright regulations. We respond to valid notices of alleged copyright infringement under the Digital Millennium Copyright Act (DMCA).
             </p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Submitting Takedown Notices</h3>
@@ -245,6 +288,97 @@ export default function Policies() {
             <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Messaging & Moderation</h3>
             <p className="text-[#888] leading-relaxed mb-4">
               Server admins possess moderation rights over text channels within their respective servers. Users may enable "Quarantine DMs" in account settings to filter links from non-friends. Violations can be reported directly via in-app reporting tools.
+            </p>
+          </section>
+
+          {/* Section: Mesh TV Terms of Use */}
+          <section id="mesh-tv" className="mb-16 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+              <Tv className="w-5 h-5 text-[#3b1df2]" />
+              <h2 className="text-2xl font-bold text-white">Mesh TV Terms of Use</h2>
+            </div>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">1. The Service</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Each time you visit, browse, or use the Mesh TV service, you accept this Agreement on behalf of yourself and all members of your household and others who use the service under your account. Mesh TV is a personalized service that offers, recommends, and helps you discover digital movies, television shows, and other video content ("Digital Content"). We personalize content and features, including showing you recommendations that might be of interest to you.
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Compatible Devices & Geographic Variability</h3>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li>In order to stream or download Digital Content, you will need to use a personal computer, portable media player, or other device that meets our system and compatibility requirements.</li>
+              <li>The Digital Content available to you will vary over time and by location due to technical and other restrictions imposed by content providers.</li>
+              <li>We will use technologies to verify your geographic location, and you may not use any technology or technique to obscure or disguise your location.</li>
+            </ul>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. Digital Content & Restrictions</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              The Service may allow you to access Digital Content on a subscription basis (such as through Mesh TV Pro), as well as through rentals, purchases, pay-per-view, or on a free ad-supported basis. Subject to your payment and compliance with these terms, you are granted a non-exclusive, non-transferable, non-sublicensable, limited license to access and view the Digital Content for personal, non-commercial, private use.
+            </p>
+            <p className="text-[#888] leading-relaxed mb-4">
+              You may not copy, display, sell, rent, or broadcast the Digital Content. You are also strictly prohibited from attempting to bypass or circumvent any digital rights management or content protection system used as part of Mesh TV.
+            </p>
+            <p className="text-[#888] leading-relaxed mb-4">
+              The resolution and quality of the Digital Content depend on your device and bandwidth, and we may decrease the resolution of streamed content to provide an uninterrupted viewing experience.
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">4. Liability & Additional Terms</h3>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li><strong className="text-white">Software and Data:</strong> The Mesh TV Service and Software may provide us with information relating to your use, including the Digital Content that you download and stream, and your viewing history. We may provide certain information regarding your use of Digital Content to video content providers in a manner that is not identifiable to you.</li>
+              <li><strong className="text-white">Termination:</strong> We may terminate your access to Mesh TV or Mesh TV Pro at our discretion. If we do so without cause, we will give you a pro-rated refund; however, if you violate any terms of this Agreement, your rights terminate immediately without a refund.</li>
+              <li><strong className="text-white">Explicit Content:</strong> You may encounter content that may be offensive or explicit, and you agree to use the Service at your sole risk.</li>
+              <li><strong className="text-white">Modifications:</strong> We may modify the Service to improve functionality, maintain quality, or for legal and security reasons. If you are in the EU or UK and the changes materially and adversely impact usability, we will notify you at least 30 days in advance, giving you the right to cancel and receive a prorated refund.</li>
+              <li><strong className="text-white">Limitation of Liability:</strong> In no event shall our total liability to you for damages arising from your use of the Service or Digital Content exceed the amount you paid to us over the past 12 months to purchase, rent, or view the Digital Content related to your claim.</li>
+            </ul>
+          </section>
+
+          {/* Section: Paid Subscriptions & Mesh TV Pro */}
+          <section id="subscriptions" className="mb-16 scroll-mt-32">
+            <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+              <CreditCard className="w-5 h-5 text-[#3b1df2]" />
+              <h2 className="text-2xl font-bold text-white">Paid Subscriptions & Mesh TV Pro</h2>
+            </div>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Provider & Eligibility</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              The Mesh entity providing the service corresponds to where you live: if you live in the United Kingdom, services are provided by Mesh Services UK Ltd; if you live in the European Union, services are provided by our EU hub (e.g., Mesh Services EU GmbH / Ireland DAC); and if you live in the United States, services are provided by our US subsidiary (e.g., Mesh Services US LLC / Inc.). You must be at least 18 years old (or the age of legal majority in your jurisdiction) to purchase a Paid Subscription, and a valid debit/credit card is required.
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Billing & Auto-Renewal</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Mesh TV Pro is offered on an auto-renewing subscription basis. By subscribing, you authorise Mesh to charge your selected payment method on a recurring Monthly (£4.99) or Annual (£49.99) billing cycle. All prices are listed in Great British Pounds (GBP/£) and are inclusive of UK Value Added Tax (VAT) where applicable.
+            </p>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li><strong className="text-white">Auto-Renewal:</strong> Your Subscription will automatically renew at the end of each billing cycle unless you cancel it before the renewal date.</li>
+              <li><strong className="text-white">Reminders:</strong> For Annual subscriptions, we will send you a written reminder notice via email before your Subscription auto-renews, detailing the renewal date and upcoming charges.</li>
+              <li><strong className="text-white">Promotions:</strong> If you activate a Promotional Offer for a Paid Subscription, you will automatically be moved to the full-price subscription (£4.99/mo or £49.99/yr) at the end of the promotional period. You must cancel your Promotional Offer before it expires if you do not wish to be charged.</li>
+              <li><strong className="text-white">Price Changes:</strong> Mesh reserves the right to change the price of the Mesh TV Pro Subscription. If we increase the price, we will provide you with at least thirty (30) days' written notice before the change takes effect. Price changes take effect at the start of the next subscription period.</li>
+            </ul>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">3. Cancellations & Terminations</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              You can cancel your Mesh TV Pro Subscription at any time. You can cancel by contacting our support email address: msao262026@outlook.com and they will be read within 24hrs (Including weekends). If you cancel your Subscription, you will not receive a partial refund for the current billing period, but you will continue to have full access to Mesh TV Pro benefits until the end of your current paid billing cycle.
+            </p>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Mesh reserves the right to suspend, discontinue, or terminate your access to Paid Subscriptions at any time without refund if you violate our Community Conduct rules (e.g., sharing illegal content, harassment, copyright infringement on Mesh Music/TV), if required by a court or regulatory authority, or to protect the security of our WebRTC or database infrastructure.
+            </p>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">4. UK/EU Statutory Rights & Cooling-Off Periods</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Under UK consumer protection law, you have a statutory right to cancel your Subscription within 14 days of purchase and receive a full refund.
+            </p>
+            <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
+              <li><strong className="text-white">Prorated Refunds:</strong> Mesh subscriptions are digital services, and if you cancel during the 14-day window, you will receive a partial refund prorated based on how many days of use you enjoyed before cancelling.</li>
+              <li><strong className="text-white">The Digital Waiver:</strong> By choosing to stream, download, or access Mesh TV Pro exclusive content within the first 14 days of your Subscription, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 14-day right to cancel and receive a refund. Unused Subscriptions retain the right to claim a full refund within the 14-day window.</li>
+              <li><strong className="text-white">Annual Renewal Cooling-Off Right:</strong> In compliance with the DMCCA, if you are on an Annual Subscription (£49.99/year), you are entitled to a secondary 14-day cooling-off period immediately following the auto-renewal of your contract. If you cancel within this 14-day renewal window, you are entitled to a refund for the renewed year, adjusted proportionally for any content consumed during those 14 days.</li>
+              <li><strong className="text-white">Trial Conversions:</strong> If you live in the UK, a new 14-day Cancellation Period applies when a free trial converts to a full Paid Subscription.</li>
+            </ul>
+
+            <h3 className="text-lg font-bold text-white mt-6 mb-2">5. Arbitration & Local Jurisdictions</h3>
+            <p className="text-[#888] leading-relaxed mb-4">
+              If you live in the United States, you are bound by the arbitration provision set forth in the Mesh Terms of Service, meaning disputes will be resolved by mandatory binding arbitration, and you waive any right to participate in a class action lawsuit or class-wide arbitration.
+            </p>
+            <p className="text-[#888] leading-relaxed mb-4">
+              Pursuant to the Code de la Consommation, users in France are entitled to consumer mediation to resolve disputes. For users in Germany and the Netherlands, nothing in these Terms affects your legal rights under mandatory local laws regarding digital products, digital services, and general terms and conditions.
             </p>
           </section>
 
