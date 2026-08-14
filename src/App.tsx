@@ -7,8 +7,9 @@ import Infrastructure from './pages/Infrastructure';
 import Support from './pages/Support';
 import About from './pages/About';
 import Bot from './pages/Bot'; 
-import AdminLogin from './pages/AdminLogin'; // <--- Import the Login page
-import AdminDashboard from './pages/AdminDashboard'; // <--- Import the Command Center
+import Jobs from './pages/jobs'; // <--- 1. Added Jobs page import
+import AdminLogin from './pages/AdminLogin';
+import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -23,6 +24,9 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/bot" element={<Bot />} />
         
+        {/* Careers & Hiring */}
+        <Route path="/jobs" element={<Jobs />} /> {/* <--- 2. Added /jobs route */}
+
         {/* Admin & Operations Routes */}
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/admin" element={<AdminDashboard />} />

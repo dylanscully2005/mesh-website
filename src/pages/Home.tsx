@@ -19,6 +19,8 @@ export default function Home() {
             <Link to="/policies" className="hover:text-zinc-200 transition-colors">Compliance</Link>
             <Link to="/about" className="hover:text-zinc-200 transition-colors">Our Story</Link>
             <Link to="/support" className="hover:text-zinc-200 transition-colors">Support</Link>
+            <Link to="/jobs" className="hover:text-zinc-200 transition-colors">Jobs</Link>
+
             <Link to="/admin-login" className="hover:text-[#3b1df2] transition-colors flex items-center gap-1 font-bold">Admin</Link>
           </div>
           <a href="https://meshservicesuk.com" className="bg-zinc-100 text-black px-5 py-2 rounded-lg text-sm font-bold hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-block">
