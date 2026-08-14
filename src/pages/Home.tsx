@@ -11,7 +11,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 group cursor-pointer">
             <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6 group-hover:scale-110 transition-transform" />
-            <span className="text-base font-bold tracking-tight text-zinc-100">Mesh Services UK</span>
+            <span className="text-base font-bold tracking-tight text-zinc-100">Mesh Global Services</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
             <Link to="/infrastructure" className="hover:text-zinc-200 transition-colors">Infrastructure</Link>

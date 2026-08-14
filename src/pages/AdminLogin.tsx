@@ -36,9 +36,9 @@ export default function AdminLogin() {
       <div className="w-full max-w-md">
         <div className="flex flex-col items-center mb-10">
           <Hexagon fill="#1800ad" className="text-mesh-brand w-12 h-12 mb-4" />
-          <h1 className="text-3xl font-bold text-white tracking-tight">Mesh Operations</h1>
+          <h1 className="text-3xl font-bold text-white tracking-tight">Mesh Operations Dashboard</h1>
           <p className="text-[#888] font-medium mt-2 flex items-center gap-2 text-sm">
-            <ShieldCheck className="w-4 h-4 text-[#10B981]" /> Enterprise Authentication Gate
+            <ShieldCheck className="w-4 h-4 text-[#10B981]" /> If you are having issues logging in, please contact the Mesh team.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export default function AdminLogin() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-black border border-white/10 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-mesh-brand transition-colors"
-                placeholder="dylan@meshservicesuk.com"
+                placeholder="Email Address"
               />
             </div>
 
@@ -82,7 +82,7 @@ export default function AdminLogin() {
               className="w-full py-3 mt-4 bg-white text-[#1800ad] text-sm font-bold rounded-lg hover:bg-gray-200 transition-colors flex items-center justify-center gap-2 disabled:opacity-50"
             >
               {loading ? 'Authenticating...' : (
-                <><Lock className="w-4 h-4" /> Unlock Command Center</>
+                <><Lock className="w-4 h-4" /> Login</>
               )}
             </button>
           </form>

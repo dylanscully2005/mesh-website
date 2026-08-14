@@ -131,6 +131,21 @@ export default function Support() {
 
         </div>
       </main>
+       <footer className="border-t border-white/5 mt-20 pt-10 pb-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
+            © {new Date().getFullYear()} Mesh Services UK. <br className="md:hidden" />
+            <span className="hidden md:inline"> | </span> 
+            Run with purpose by Dylan Scully.
+          </div>
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-zinc-500">
+            <Link to="/bot" className="hover:text-zinc-200 transition-colors">Discord Bot</Link>
+            <Link to="/policies" className="hover:text-zinc-200 transition-colors">Terms & Privacy</Link>
+            <Link to="/policies" className="hover:text-zinc-200 transition-colors">DMCA</Link>
+            <Link to="/support" className="hover:text-zinc-200 transition-colors">Contact</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
