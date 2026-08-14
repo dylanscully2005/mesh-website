@@ -1,22 +1,12 @@
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, FileText, ShieldCheck, Lock, Users, Tv, CreditCard } from 'lucide-react';
+import { FileText, ShieldCheck, Lock, Users, Tv, CreditCard } from 'lucide-react';
 
 export default function Policies() {
   return (
     <div className="min-h-screen bg-[#050505] text-[#ededed] font-sans selection:bg-[#1800ad] selection:text-white">
       
       {/* Minimal Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6" />
-            <span className="text-base font-bold tracking-tight text-white">Mesh Services</span>
-          </Link>
-          <Link to="/" className="text-sm font-medium text-[#888] flex items-center gap-2 hover:text-white transition-colors">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
-        </div>
-      </nav>
+  
 
       {/* Docs Layout */}
       <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">

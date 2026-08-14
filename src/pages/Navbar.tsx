@@ -1,60 +1,81 @@
-// src/components/Navbar.tsx
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// src/pages/Navbar.tsx
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Hexagon, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  // Automatically close the mobile menu when the route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
+
+  // Optional: Hide the main navbar on Admin pages
+  if (location.pathname.startsWith('/admin')) {
+    return null;
+  }
+
+  // The main links for your site
+  const navLinks = [
+    { name: 'Artists', path: '/artists' },
+    { name: 'Studios', path: '/studios' },
+    { name: 'Infrastructure', path: '/infrastructure' },
+    { name: 'Economics', path: '/economics' },
+    { name: 'Jobs', path: '/jobs' },
+  ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
+    <nav className="fixed top-0 w-full z-[100] bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-          <Hexagon fill="#1800ad" className="text-mesh-brand w-6 h-6" />
-          <span className="text-base font-bold tracking-tight text-white">Mesh Services UK</span>
+          <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6" />
+          <span className="text-base font-bold tracking-tight text-white">Mesh Global Services</span>
         </Link>
 
-        {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#888888]">
-          <Link to="/infrastructure" className="hover:text-white transition-colors">Infrastructure</Link>
-          <Link to="/economics" className="hover:text-white transition-colors">Economics</Link>
-          <Link to="/about" className="hover:text-white transition-colors">Our Vision</Link>
-          <Link to="/bot" className="hover:text-white transition-colors">Mesh Bot</Link>
-          <Link to="/support" className="hover:text-white transition-colors">Support</Link>
-          <Link to="/policies" className="hover:text-white transition-colors">Compliance</Link>
-        </div>
-
-        {/* Desktop Launch App Button */}
-        <div className="hidden md:flex items-center gap-4">
-          <a href="https://app.meshservicesuk.com" className="bg-white text-black px-4 py-1.5 rounded-md text-sm font-bold hover:bg-gray-200 transition-colors">
-            Launch App
-          </a>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.name} 
+              to={link.path} 
+              className={`text-sm font-medium transition-colors ${
+                location.pathname === link.path ? 'text-white' : 'text-[#888] hover:text-white'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Hamburger Button */}
         <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden text-white focus:outline-none p-2"
-          aria-label="Toggle Menu"
+          className="md:hidden text-[#888] hover:text-white transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-[#0a0a0a] border-b border-white/10 px-6 py-6 flex flex-col gap-4 text-base font-medium text-[#888]">
-          <Link to="/infrastructure" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Infrastructure</Link>
-          <Link to="/economics" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Economics</Link>
-          <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Our Vision</Link>
-          <Link to="/bot" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Mesh Bot</Link>
-          <Link to="/support" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Support</Link>
-          <Link to="/policies" onClick={() => setIsOpen(false)} className="hover:text-white transition-colors">Compliance</Link>
-          <a href="https://meshservicesuk.com" className="w-full text-center bg-white text-black py-3 rounded-md font-bold mt-2">
-            Launch App
-          </a>
+        <div className="md:hidden absolute top-16 left-0 w-full bg-[#050505]/95 backdrop-blur-xl border-b border-white/5 shadow-2xl">
+          <div className="flex flex-col px-6 py-6 gap-6">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.name} 
+                to={link.path} 
+                className={`text-base font-medium transition-colors ${
+                  location.pathname === link.path ? 'text-[#3b1df2]' : 'text-[#888] hover:text-white'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </nav>

@@ -1,29 +1,13 @@
 // src/pages/Economics.tsx
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, Coins, PieChart, Activity, CreditCard } from 'lucide-react';
+import { Coins, PieChart, Activity, CreditCard } from 'lucide-react';
 
 export default function Economics() {
   return (
     <div className="min-h-screen bg-[#050505] text-[#ededed] font-sans selection:bg-mesh-brand selection:text-white pb-20">
       
       {/* Minimal Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Hexagon fill="#1800ad" className="text-mesh-brand w-6 h-6" />
-            <span className="text-base font-bold tracking-tight text-white">Mesh Services UK</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#888888]">
-            <Link to="/" className="hover:text-white transition-colors">Infrastructure</Link>
-            <span className="text-white">Economics</span>
-            <Link to="/about" className="hover:text-white transition-colors">Our Vision</Link>
-            <Link to="/policies" className="hover:text-white transition-colors">Compliance</Link>
-          </div>
-          <Link to="/" className="text-sm font-medium text-[#888] flex items-center gap-2 hover:text-white transition-colors md:hidden">
-            <ArrowLeft className="w-4 h-4" /> Back
-          </Link>
-        </div>
-      </nav>
+    
 
       {/* Hero Section */}
       <main className="pt-32 px-6 max-w-5xl mx-auto">

@@ -1,33 +1,13 @@
 // src/pages/Home.tsx
 import { Link } from 'react-router-dom';
-import { ArrowRight, Music, Tv, ShieldCheck, Code2, Coins, Hexagon, Globe, MapPin, User, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Music, Tv, ShieldCheck, Code2, Coins, Globe, MapPin, User, Sparkles, Zap } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050505] text-zinc-300 font-sans selection:bg-[#1800ad] selection:text-white pb-20">
       
       {/* Navbar - Made slightly glassier and cleaned up */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/70 backdrop-blur-2xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 group cursor-pointer">
-            <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6 group-hover:scale-110 transition-transform" />
-            <span className="text-base font-bold tracking-tight text-zinc-100">Mesh Global Services</span>
-          </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
-            <Link to="/infrastructure" className="hover:text-zinc-200 transition-colors">Infrastructure</Link>
-            <Link to="/economics" className="hover:text-zinc-200 transition-colors">Economics</Link>
-            <Link to="/policies" className="hover:text-zinc-200 transition-colors">Compliance</Link>
-            <Link to="/about" className="hover:text-zinc-200 transition-colors">Our Story</Link>
-            <Link to="/support" className="hover:text-zinc-200 transition-colors">Support</Link>
-            <Link to="/jobs" className="hover:text-zinc-200 transition-colors">Work With Us</Link>
-
-            <Link to="/admin-login" className="hover:text-[#3b1df2] transition-colors flex items-center gap-1 font-bold">Admin</Link>
-          </div>
-          <a href="https://meshservicesuk.com" className="bg-zinc-100 text-black px-5 py-2 rounded-lg text-sm font-bold hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)] inline-block">
-            Launch App
-          </a>
-        </div>
-      </nav>
+     
 
       {/* Hero Section - Rewritten to sound like a human with a mission */}
       <main className="pt-32 px-6 max-w-7xl mx-auto">

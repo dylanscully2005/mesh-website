@@ -1,28 +1,13 @@
 // src/pages/About.tsx
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, MapPin, Users, Target, Zap, ShieldCheck } from 'lucide-react';
+import {  MapPin, Users, Target, Zap, ShieldCheck } from 'lucide-react';
 
 export default function About() {
   return (
     <div className="min-h-screen bg-[#050505] text-[#ededed] font-sans selection:bg-mesh-brand selection:text-white pb-20">
       
       {/* Minimal Navbar */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/90 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Hexagon fill="#1800ad" className="text-mesh-brand w-6 h-6" />
-            <span className="text-base font-bold tracking-tight text-white">Mesh Services UK</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#888888]">
-            <Link to="/infrastructure" className="hover:text-white transition-colors">Infrastructure</Link>
-            <Link to="/economics" className="hover:text-white transition-colors">Economics</Link>
-            <span className="text-white">Our Vision</span>
-          </div>
-          <Link to="/" className="text-sm font-medium text-[#888] flex items-center gap-2 hover:text-white transition-colors md:hidden">
-            <ArrowLeft className="w-4 h-4" /> Back
-          </Link>
-        </div>
-      </nav>
+   
 
       <main className="pt-32 px-6 max-w-5xl mx-auto">
         

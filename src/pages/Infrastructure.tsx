@@ -1,35 +1,13 @@
 // src/pages/Infrastructure.tsx
 import { Link } from 'react-router-dom';
-import { Hexagon, ArrowLeft, Server, Database, Radio, MonitorPlay, Code2, ShieldCheck, Globe, Activity } from 'lucide-react';
+import {  Server, Database, Radio, MonitorPlay, Code2, ShieldCheck, Globe, Activity } from 'lucide-react';
 
 export default function Infrastructure() {
   return (
     <div className="min-h-screen bg-[#050505] text-zinc-300 font-sans selection:bg-[#1800ad] selection:text-white pb-20">
       
       {/* Navbar - Matched to Home.tsx style */}
-      <nav className="fixed top-0 w-full z-50 bg-[#050505]/70 backdrop-blur-2xl border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 group cursor-pointer">
-            <Hexagon fill="#1800ad" className="text-[#1800ad] w-6 h-6 group-hover:scale-110 transition-transform" />
-            <span className="text-base font-bold tracking-tight text-zinc-100">Mesh Services UK</span>
-          </Link>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-500">
-            <span className="text-white font-bold">Infrastructure</span>
-            <Link to="/economics" className="hover:text-zinc-200 transition-colors">Economics</Link>
-            <Link to="/policies" className="hover:text-zinc-200 transition-colors">Compliance</Link>
-            <Link to="/about" className="hover:text-zinc-200 transition-colors">Our Story</Link>
-            <Link to="/support" className="hover:text-zinc-200 transition-colors">Support</Link>
-          </div>
-          <Link to="/" className="text-sm font-bold text-zinc-400 flex items-center gap-2 hover:text-white transition-colors bg-white/5 px-4 py-1.5 rounded-lg border border-white/10 md:hidden">
-            <ArrowLeft className="w-4 h-4" /> Back
-          </Link>
-          <div className="hidden md:block">
-            <Link to="/" className="text-sm font-bold text-zinc-400 flex items-center gap-2 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Home
-            </Link>
-          </div>
-        </div>
-      </nav>
+  
 
       {/* Hero Section */}
       <main className="pt-32 px-6 max-w-6xl mx-auto">

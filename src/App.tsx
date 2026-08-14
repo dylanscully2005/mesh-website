@@ -1,5 +1,6 @@
 // src/App.tsx
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './pages/Navbar'; // <--- 1. Import the global Navbar
 import Home from './pages/Home';
 import Policies from './pages/Policies';
 import Economics from './pages/Economics';
@@ -7,7 +8,9 @@ import Infrastructure from './pages/Infrastructure';
 import Support from './pages/Support';
 import About from './pages/About';
 import Bot from './pages/Bot'; 
-import Jobs from './pages/jobs'; // <--- 1. Added Jobs page import
+import Jobs from './pages/jobs'; // Matches the lowercase 'jobs.tsx' in your image
+import Artists from './pages/Artists';
+import Studios from './pages/Studios';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
@@ -15,6 +18,9 @@ import NotFound from './pages/NotFound';
 export default function App() {
   return (
     <Router>
+      {/* 2. Place Navbar here so it appears on all pages */}
+      <Navbar /> 
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/infrastructure" element={<Infrastructure />} />
@@ -24,8 +30,12 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/bot" element={<Bot />} />
         
+        {/* Community & Ecosystem */}
+        <Route path="/artists" element={<Artists />} /> 
+        <Route path="/studios" element={<Studios />} /> 
+        
         {/* Careers & Hiring */}
-        <Route path="/jobs" element={<Jobs />} /> {/* <--- 2. Added /jobs route */}
+        <Route path="/jobs" element={<Jobs />} />
 
         {/* Admin & Operations Routes */}
         <Route path="/admin-login" element={<AdminLogin />} />
