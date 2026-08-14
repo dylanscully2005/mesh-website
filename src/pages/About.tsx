@@ -40,7 +40,7 @@ export default function About() {
             <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-mesh-brand/50 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-48 h-48 bg-mesh-brand/10 blur-[80px] rounded-full group-hover:bg-mesh-brand/20 transition-colors"></div>
               <div className="relative z-10">
-                <div className="text-xs text-mesh-brand font-bold uppercase tracking-widest mb-2">Founder & CEO</div>
+                <div className="text-xs text-mesh-brand font-bold uppercase tracking-widest mb-2">By Dylan Scully</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Dylan</h3>
                 <p className="text-[#888] font-medium leading-relaxed mb-6">
                   Dylan leads the product vision and technical architecture for Mesh. Specializing in React development, Supabase database infrastructure, and UI/UX design, his focus is on building a blazing-fast, zero-latency network for high-fidelity media delivery.
@@ -54,7 +54,7 @@ export default function About() {
             {/* Myles's Card */}
             <div className="p-8 rounded-2xl bg-[#0A0A0A] border border-white/10 hover:border-white/20 transition-colors relative overflow-hidden group">
               <div className="relative z-10">
-                <div className="text-xs text-[#888] font-bold uppercase tracking-widest mb-2">Operations Lead & COO</div>
+                <div className="text-xs text-[#888] font-bold uppercase tracking-widest mb-2">By Myles</div>
                 <h3 className="text-2xl font-bold text-white mb-4">Myles</h3>
                 <p className="text-[#888] font-medium leading-relaxed mb-6">
                   Myles commands the day-to-day platform operations. From enforcing Trust & Safety policies to managing creator payouts and community moderation, he ensures the Mesh ecosystem remains secure, fair, and legally compliant.

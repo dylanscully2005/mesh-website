@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './pages/Navbar'; // <--- 1. Import the global Navbar
 import Home from './pages/Home';
 import Policies from './pages/Policies';
-import Economics from './pages/Economics';
+import Economics from './pages/payouts';
 import Infrastructure from './pages/Infrastructure';
 import Support from './pages/Support';
 import About from './pages/About';
-import Bot from './pages/Bot'; 
+
 import Jobs from './pages/jobs'; // Matches the lowercase 'jobs.tsx' in your image
 import Artists from './pages/Artists';
 import Studios from './pages/Studios';
@@ -22,13 +22,12 @@ export default function App() {
       <Navbar /> 
       
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
         <Route path="/infrastructure" element={<Infrastructure />} />
-        <Route path="/economics" element={<Economics />} />
+        <Route path="/payouts" element={<Economics />} />
         <Route path="/policies" element={<Policies />} />
         <Route path="/support" element={<Support />} />
         <Route path="/about" element={<About />} />
-        <Route path="/bot" element={<Bot />} />
         
         {/* Community & Ecosystem */}
         <Route path="/artists" element={<Artists />} /> 

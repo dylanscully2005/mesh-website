@@ -13,7 +13,7 @@ export default function Infrastructure() {
       <main className="pt-32 px-6 max-w-6xl mx-auto">
         <div className="flex flex-col items-start mt-12 mb-20">
           <div className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-zinc-400 text-xs font-bold tracking-wide mb-8 flex items-center gap-2 shadow-lg">
-            <Server className="w-3 h-3 text-[#3b1df2]" /> Bare-Metal Philosophy
+            <Server className="w-3 h-3 text-[#3b1df2]" /> A deep dive into how Mesh works behind the scene.
           </div>
           
           <h1 className="text-5xl md:text-[72px] font-extrabold tracking-tighter mb-6 leading-[1.05] text-white max-w-4xl">
@@ -47,9 +47,9 @@ export default function Infrastructure() {
                   <span className="text-xs font-mono font-bold text-[#3b1df2] bg-[#1800ad]/20 px-2 py-1 rounded">NODE: IRE-01</span>
                   <Activity className="w-4 h-4 text-green-400" />
                 </div>
-                <h4 className="text-xl font-bold text-zinc-100 mb-2">UK & West Europe</h4>
+                <h4 className="text-xl font-bold text-zinc-100 mb-2">UK & West Europe (eu-west-1)</h4>
                 <p className="text-sm text-zinc-400 font-medium leading-relaxed">
-                  The Mothership. Located in Ireland, this cluster handles our primary Postgres database architecture, core authentication, and media ingestion for both the UK and mainland Europe.
+                  This is where the hub for all of Mesh's European traffic is located. It acts as a primary edge-caching node for the UK and Western Europe, ensuring that streams and UI requests are served with minimal latency, even during peak hours.
                 </p>
               </div>
 
@@ -59,9 +59,9 @@ export default function Infrastructure() {
                   <span className="text-xs font-mono font-bold text-zinc-400 bg-white/5 px-2 py-1 rounded">NODE: NCA-01</span>
                   <Activity className="w-4 h-4 text-green-400" />
                 </div>
-                <h4 className="text-xl font-bold text-zinc-100 mb-2">North America</h4>
+                <h4 className="text-xl font-bold text-zinc-100 mb-2">North America (us-west-1)</h4>
                 <p className="text-sm text-zinc-400 font-medium leading-relaxed">
-                  Based in Northern California, this node acts as a heavy edge-caching tier to ensure smooth, high-bandwidth delivery for audiences across the United States and Canada.
+                  Based in Northern California, this American Hub acts as a heavy edge-caching tier to ensure smooth, high-bandwidth delivery for audiences across the United States and Canada.
                 </p>
               </div>
 

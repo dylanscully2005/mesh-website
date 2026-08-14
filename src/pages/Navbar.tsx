@@ -19,11 +19,16 @@ export default function Navbar() {
 
   // The main links for your site
   const navLinks = [
+    { name: 'Home', path: '/Home' },
     { name: 'Artists', path: '/artists' },
     { name: 'Studios', path: '/studios' },
-    { name: 'Infrastructure', path: '/infrastructure' },
-    { name: 'Economics', path: '/economics' },
+    { name: 'About', path: '/about' },
+    { name: 'How do we do it?', path: '/infrastructure' },
+    { name: 'Payouts', path: '/payouts' },
     { name: 'Jobs', path: '/jobs' },
+    { name: 'Support', path: '/support' },
+    { name: "Policies", path: '/policies' },
+
   ];
 
   return (

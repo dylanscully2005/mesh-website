@@ -10,7 +10,7 @@ export default function Support() {
     },
     {
       question: "When are the 70% revenue splits paid out?",
-      answer: "We operate on a standard Net-30 payout cycle. Earnings generated in January will be cleared and deposited into your connected bank or PayPal account by the end of February."
+      answer: "We calculate payouts at the end of every month and after six months we release the funds to the account you have provided, please note there is a £50 minimum threshold for payouts. If you have not received your payout after 6 months, please contact support."
     },
     {
       question: "Why was my track submission rejected?",
@@ -90,6 +90,9 @@ export default function Support() {
                     <a href="mailto:support@meshservicesuk.com" className="text-white font-semibold hover:text-[#6042ff] transition-colors block">
                       support@meshservicesuk.com
                     </a>
+                     <a href="mailto:legal@meshservicesuk.com" className="text-white font-semibold hover:text-[#6042ff] transition-colors block">
+                      legal@meshservicesuk.com
+                    </a>
                   </div>
                 </div>
 
@@ -114,7 +117,7 @@ export default function Support() {
                   <div>
                     <div className="text-xs text-[#888] font-bold uppercase tracking-wider mb-1">Operating Hours</div>
                     <div className="text-white font-medium">Mon - Fri, 9:00 AM - 5:00 PM (GMT)</div>
-                    <div className="text-[#888] text-sm mt-1">Please allow up to 24 hours for a response.</div>
+                    <div className="text-[#888] text-sm mt-1">Please allow up to 24 hours for a response. if you have already contacted us, we will get back to you as soon as possible.</div>
                   </div>
                 </div>
               </div>

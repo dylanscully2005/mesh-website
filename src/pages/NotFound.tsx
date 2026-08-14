@@ -8,10 +8,10 @@ export default function NotFound() {
       <h1 className="text-6xl font-black text-white mb-4 tracking-tighter">404</h1>
       <h2 className="text-2xl font-bold text-white mb-6">Frequency Not Found</h2>
       <p className="text-[#888] max-w-md mx-auto mb-10 font-medium">
-        The page you are looking for doesn't exist, has been moved, or is currently offline.
+        The page you are looking for doesn't exist, has been moved, or is currently offline, Contact a mesh support agent if you believe this is an error.
       </p>
       <Link to="/" className="px-6 py-3 bg-white text-[#1800ad] font-bold rounded-lg hover:bg-gray-200 transition-colors flex items-center gap-2">
-        <Home className="w-5 h-5" /> Return to Hub
+        <Home className="w-5 h-5" /> Return to Home
       </Link>
     </div>
   );

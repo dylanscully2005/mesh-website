@@ -62,11 +62,11 @@ export default function Home() {
             <div>
               <div className="flex items-center justify-between mb-4">
                 <Tv className="w-8 h-8 text-zinc-200" />
-                <span className="text-[10px] bg-white/5 text-zinc-300 border border-white/10 px-2 py-1 rounded-md uppercase font-bold tracking-widest">Est. 2027</span>
+                <span className="text-[10px] bg-white/5 text-zinc-300 border border-white/10 px-2 py-1 rounded-md uppercase font-bold tracking-widest">Est. Q1 2027</span>
               </div>
               <h3 className="text-2xl font-bold text-zinc-100 mb-2 tracking-tight">MeshTV</h3>
               <p className="text-zinc-400 font-medium leading-relaxed">
-                Independent cinema in real 4K HDR. A home for visual storytellers that isn't buried underneath endless corporate reboots.
+                A new way to watch indie films and shorts. MeshTV is a decentralized streaming platform that allows filmmakers to upload their content directly to the network, MesghTV will be available in 2027, but you can pre-sign up now to get early access, You can also sign up for the Pro Plan to get early access to MeshTV and other features.
               </p>
             </div>
           </div>
