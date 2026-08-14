@@ -19,7 +19,7 @@ export default function Home() {
             <Link to="/policies" className="hover:text-zinc-200 transition-colors">Compliance</Link>
             <Link to="/about" className="hover:text-zinc-200 transition-colors">Our Story</Link>
             <Link to="/support" className="hover:text-zinc-200 transition-colors">Support</Link>
-            <Link to="/jobs" className="hover:text-zinc-200 transition-colors">Jobs</Link>
+            <Link to="/jobs" className="hover:text-zinc-200 transition-colors">Work With Us</Link>
 
             <Link to="/admin-login" className="hover:text-[#3b1df2] transition-colors flex items-center gap-1 font-bold">Admin</Link>
           </div>
