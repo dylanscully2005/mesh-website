@@ -22,6 +22,7 @@ export default function Navbar() {
     { name: 'Home', path: '/Home' },
     { name: 'Mesh+', path: '/mesh-plus' },
     { name: 'MeshAI', path: '/mesh-ai' },
+    { name: "Our Services", path: '/ourservices' },
     { name: 'Artists', path: '/artists' },
     { name: 'Studios', path: '/studios' },
     { name: 'About', path: '/about' },
