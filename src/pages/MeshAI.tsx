@@ -4,25 +4,26 @@ import {
   Brain, 
   Wand2, 
   Zap, 
-  ArrowRight
+  ArrowRight,
+  
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function MeshAI() {
   return (
-    <div className="min-h-screen bg-[#050505] relative overflow-hidden flex flex-col items-center pt-32 pb-24 px-6 font-sans selection:bg-[#ff5757] selection:text-white">
+    <div className="min-h-screen bg-[#050505] relative overflow-hidden flex flex-col items-center pt-32 font-sans selection:bg-[#ff5757] selection:text-white">
       
       {/* Ambient Background Glows */}
       <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-[#8c52ff] rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none"></div>
       <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#ff5757] rounded-full mix-blend-screen filter blur-[150px] opacity-20 pointer-events-none"></div>
 
       {/* Hero Section */}
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mb-20">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mb-16 px-6">
         
         {/* Exclusive Badge */}
         <div className="px-4 py-1.5 rounded-full border border-[#8c52ff]/30 bg-gradient-to-r from-[#ff5757]/10 to-[#8c52ff]/10 text-white text-xs font-bold tracking-widest uppercase mb-8 flex items-center gap-2 shadow-[0_0_20px_rgba(140,82,255,0.2)]">
           <Sparkles className="w-3 h-3 text-[#ff5757]" />
-          Purchase Mesh+ to unlock Mesh AI (DEV) Please note Mesh AI is currently in development and is not yet available to the public
+          Exclusive to Mesh+ Subscribers
         </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-white">
@@ -41,8 +42,31 @@ export default function MeshAI() {
         </Link>
       </div>
 
+      {/* Video Showcase Section */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto mb-24 group px-6">
+        {/* Glowing border effect behind the video */}
+        <div className="absolute inset-6 bg-gradient-to-r from-[#ff5757] to-[#8c52ff] rounded-[2.5rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-300"></div>
+        
+        {/* Video Container */}
+        <div className="relative bg-[#050505] rounded-[2rem] border border-white/10 overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            controls
+            /* poster="/mesh-ai-thumbnail.jpg"  <-- Optional: Add a thumbnail here if you want an image to show before it plays */
+          >
+            {/* PUT YOUR VIDEO FILE IN THE "public" FOLDER AND RENAME THE SRC BELOW */}
+            <source src="/mesh-ai-promo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
       {/* Features Grid */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl px-6">
         
         {/* Feature 1: Catch Me Up */}
         <div className="group relative p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ff5757]/50 overflow-hidden transition-all duration-300 flex flex-col justify-between">
@@ -104,8 +128,10 @@ export default function MeshAI() {
 
       </div>
 
-      {/* Decorative Bottom Graphic */}
-    {/* Footer Neon Text */}
+  
+
+      {/* Footer */}
+   {/* Footer Neon Text */}
       <footer className="border-t border-white/5 mt-20 pt-10 pb-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
@@ -113,11 +139,10 @@ export default function MeshAI() {
             <span className="hidden md:inline"> | </span> 
             Run with purpose by Dylan Scully.
             <span className="hidden md:inline"> | </span>
-            if you have any questions, please reach out to <a href="mailto:it@meshservicesuk.com" className="text-[#8c52ff] hover:underline">it@meshservicesuk.com</a>
+            For any questions regarding Mesh+, please contact <a href="mailto:it@meshservicesuk.com" className="text-[#ff5757] hover:underline">it@meshservicesuk.com</a>
           </div>
         </div>
       </footer>
-    </div>      
-    
+    </div>
   );
 }
