@@ -20,6 +20,8 @@ export default function Navbar() {
   // The main links for your site
   const navLinks = [
     { name: 'Home', path: '/Home' },
+    { name: 'Mesh+', path: '/mesh-plus' },
+    { name: 'MeshAI', path: '/mesh-ai' },
     { name: 'Artists', path: '/artists' },
     { name: 'Studios', path: '/studios' },
     { name: 'About', path: '/about' },

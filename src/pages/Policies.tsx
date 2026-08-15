@@ -21,7 +21,7 @@ export default function Policies() {
             <a href="#dmca" className="text-sm font-medium text-[#888] hover:text-white transition-colors">DMCA & Copyright</a>
             <a href="#community" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Community Guidelines</a>
             <a href="#mesh-tv" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Mesh TV Terms of Use</a>
-            <a href="#subscriptions" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Paid Subscriptions & TV Pro</a>
+            <a href="#subscriptions" className="text-sm font-medium text-[#888] hover:text-white transition-colors">Mesh+ Subscriptions</a>
             
             <div className="mt-8 p-4 rounded-xl bg-white/5 border border-white/10">
               <h4 className="text-xs font-bold text-white uppercase mb-2">Need Legal Help?</h4>
@@ -325,28 +325,28 @@ export default function Policies() {
           <section id="subscriptions" className="mb-16 scroll-mt-32">
             <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
               <CreditCard className="w-5 h-5 text-[#3b1df2]" />
-              <h2 className="text-2xl font-bold text-white">Paid Subscriptions & Mesh TV Pro</h2>
+              <h2 className="text-2xl font-bold text-white">Mesh+ Paid Subscription</h2>
             </div>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Provider & Eligibility</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              The Mesh entity providing the service corresponds to where you live: if you live in the United Kingdom, services are provided by Mesh Services UK Ltd; if you live in the European Union, services are provided by our EU hub (e.g., Mesh Services EU GmbH / Ireland DAC); and if you live in the United States, services are provided by our US subsidiary (e.g., Mesh Services US LLC / Inc.). You must be at least 18 years old (or the age of legal majority in your jurisdiction) to purchase a Paid Subscription, and a valid debit/credit card is required.
+              The Mesh entity providing the service corresponds to where you live: if you live in the United Kingdom, services are provided by Mesh Services UK Ran by Dylan Scully; if you live in the European Union, services are provided by our EU hub; and if you live in the United States, services are provided by our US subsidiary. You must be at least 18 years old (or the age of legal majority in your jurisdiction) to purchase a Paid Subscription, and a valid debit/credit card is required.
             </p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">2. Billing & Auto-Renewal</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh TV Pro is offered on an auto-renewing subscription basis. By subscribing, you authorise Mesh to charge your selected payment method on a recurring Monthly (£4.99) or Annual (£49.99) billing cycle. All prices are listed in Great British Pounds (GBP/£) and are inclusive of UK Value Added Tax (VAT) where applicable.
+              Mesh+ is offered on an auto-renewing subscription basis. By subscribing, you authorise Mesh to charge your selected payment method on a recurring Monthly (£4.99) or Annual (£49.99) billing cycle. All prices are listed in Great British Pounds (GBP/£) and are inclusive of UK Value Added Tax (VAT) where applicable.
             </p>
             <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
               <li><strong className="text-white">Auto-Renewal:</strong> Your Subscription will automatically renew at the end of each billing cycle unless you cancel it before the renewal date.</li>
               <li><strong className="text-white">Reminders:</strong> For Annual subscriptions, we will send you a written reminder notice via email before your Subscription auto-renews, detailing the renewal date and upcoming charges.</li>
               <li><strong className="text-white">Promotions:</strong> If you activate a Promotional Offer for a Paid Subscription, you will automatically be moved to the full-price subscription (£4.99/mo or £49.99/yr) at the end of the promotional period. You must cancel your Promotional Offer before it expires if you do not wish to be charged.</li>
-              <li><strong className="text-white">Price Changes:</strong> Mesh reserves the right to change the price of the Mesh TV Pro Subscription. If we increase the price, we will provide you with at least thirty (30) days' written notice before the change takes effect. Price changes take effect at the start of the next subscription period.</li>
+              <li><strong className="text-white">Price Changes:</strong> Mesh reserves the right to change the price of the Mesh+ Subscription. If we increase the price, we will provide you with at least thirty (30) days' written notice before the change takes effect. Price changes take effect at the start of the next subscription period.</li>
             </ul>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">3. Cancellations & Terminations</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              You can cancel your Mesh TV Pro Subscription at any time. You can cancel by contacting our support email address: msao262026@outlook.com and they will be read within 24hrs (Including weekends). If you cancel your Subscription, you will not receive a partial refund for the current billing period, but you will continue to have full access to Mesh TV Pro benefits until the end of your current paid billing cycle.
+              You can cancel your Mesh+ Subscription at any time. You can cancel by contacting our support email address: subscription@meshservicesuk.com and they will be read within 24hrs (Including weekends). If you cancel your Subscription, you will not receive a partial refund for the current billing period, but you will continue to have full access to Mesh+ benefits until the end of your current paid billing cycle.
             </p>
             <p className="text-[#888] leading-relaxed mb-4">
               Mesh reserves the right to suspend, discontinue, or terminate your access to Paid Subscriptions at any time without refund if you violate our Community Conduct rules (e.g., sharing illegal content, harassment, copyright infringement on Mesh Music/TV), if required by a court or regulatory authority, or to protect the security of our WebRTC or database infrastructure.
@@ -358,7 +358,7 @@ export default function Policies() {
             </p>
             <ul className="list-disc list-outside ml-5 text-[#888] space-y-2 mb-4">
               <li><strong className="text-white">Prorated Refunds:</strong> Mesh subscriptions are digital services, and if you cancel during the 14-day window, you will receive a partial refund prorated based on how many days of use you enjoyed before cancelling.</li>
-              <li><strong className="text-white">The Digital Waiver:</strong> By choosing to stream, download, or access Mesh TV Pro exclusive content within the first 14 days of your Subscription, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 14-day right to cancel and receive a refund. Unused Subscriptions retain the right to claim a full refund within the 14-day window.</li>
+              <li><strong className="text-white">The Digital Waiver:</strong> By choosing to stream, download, or access Mesh+ exclusive content within the first 14 days of your Subscription, you expressly consent to the immediate performance of the contract and acknowledge that you will lose your 14-day right to cancel and receive a refund. Unused Subscriptions retain the right to claim a full refund within the 14-day window.</li>
               <li><strong className="text-white">Annual Renewal Cooling-Off Right:</strong> In compliance with the DMCCA, if you are on an Annual Subscription (£49.99/year), you are entitled to a secondary 14-day cooling-off period immediately following the auto-renewal of your contract. If you cancel within this 14-day renewal window, you are entitled to a refund for the renewed year, adjusted proportionally for any content consumed during those 14 days.</li>
               <li><strong className="text-white">Trial Conversions:</strong> If you live in the UK, a new 14-day Cancellation Period applies when a free trial converts to a full Paid Subscription.</li>
             </ul>

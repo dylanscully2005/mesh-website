@@ -7,6 +7,8 @@ import Economics from './pages/payouts';
 import Infrastructure from './pages/Infrastructure';
 import Support from './pages/Support';
 import About from './pages/About';
+import MeshPlus from './pages/MeshPlus';
+import MeshAI from './pages/MeshAI';
 
 import Jobs from './pages/jobs'; // Matches the lowercase 'jobs.tsx' in your image
 import Artists from './pages/Artists';
@@ -23,6 +25,8 @@ export default function App() {
       
       <Routes>
         <Route path="/Home" element={<Home />} />
+        <Route path="/mesh-plus" element={<MeshPlus />} />
+        <Route path="/mesh-ai" element={<MeshAI />} />
         <Route path="/infrastructure" element={<Infrastructure />} />
         <Route path="/payouts" element={<Economics />} />
         <Route path="/policies" element={<Policies />} />
