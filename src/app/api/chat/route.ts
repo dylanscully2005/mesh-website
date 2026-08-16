@@ -28,8 +28,8 @@ export async function POST(req: Request) {
   const { messages } = await req.json();
 
   const result = streamText({
-    // Using Google Gemini instead of OpenAI or Anthropic
-    model: google('gemini-2.5-flash'), //
+    // Use the newest stable Gemini model available to the account and allow override via env
+    model: google(process.env.GEMINI_MODEL || 'gemini-3.7-flash'),
     messages,
     system: "You are Mesh AI, an intelligent co-pilot built natively into the Mesh social ecosystem.",
   });

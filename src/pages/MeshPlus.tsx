@@ -154,7 +154,7 @@ export default function MeshPlus() {
           <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
             © {new Date().getFullYear()} Mesh Services UK. <br className="md:hidden" />
             <span className="hidden md:inline"> | </span> 
-            Run with purpose by Dylan Scully.
+            if you want to edit or view your subscription please visit <a href="https://billing.stripe.com/p/login/cNieVd7Lg57Z8FkdP47N600" className="text-[#ff5757] hover:underline">Stripe Billing</a>
             <span className="hidden md:inline"> | </span>
             For any questions regarding Mesh+, please contact <a href="mailto:subscriptions@meshservicesuk.com" className="text-[#ff5757] hover:underline">subscriptions@meshservicesuk.com</a>
           </div>
