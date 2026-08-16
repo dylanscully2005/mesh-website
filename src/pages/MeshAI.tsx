@@ -5,7 +5,8 @@ import {
   Wand2, 
   Zap, 
   ArrowRight,
-  
+  Play,
+  Tv
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -42,12 +43,16 @@ export default function MeshAI() {
         </Link>
       </div>
 
-      {/* Video Showcase Section */}
+      {/* VIDEO SECTION 1: Official Promo */}
       <div className="relative z-10 w-full max-w-5xl mx-auto mb-24 group px-6">
-        {/* Glowing border effect behind the video */}
+        <div className="flex items-center justify-center gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-zinc-500">
+          <Play className="w-3.5 h-3.5 text-[#ff5757]" /> Official Overview
+        </div>
+
+        {/* Glowing border effect behind video 1 */}
         <div className="absolute inset-6 bg-gradient-to-r from-[#ff5757] to-[#8c52ff] rounded-[2.5rem] blur-xl opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-300"></div>
         
-        {/* Video Container */}
+        {/* Video Container 1 */}
         <div className="relative bg-[#050505] rounded-[2rem] border border-white/10 overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
           <video 
             className="w-full h-full object-cover"
@@ -56,9 +61,9 @@ export default function MeshAI() {
             loop 
             playsInline
             controls
-            /* poster="/mesh-ai-thumbnail.jpg"  <-- Optional: Add a thumbnail here if you want an image to show before it plays */
+            /* poster="/mesh-ai-thumbnail.jpg" */
           >
-            {/* PUT YOUR VIDEO FILE IN THE "public" FOLDER AND RENAME THE SRC BELOW */}
+            {/* PUT YOUR FIRST VIDEO FILE IN "public" */}
             <source src="/mesh-ai-promo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -66,7 +71,7 @@ export default function MeshAI() {
       </div>
 
       {/* Features Grid */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl px-6">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl px-6 mb-24">
         
         {/* Feature 1: Catch Me Up */}
         <div className="group relative p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 hover:border-[#ff5757]/50 overflow-hidden transition-all duration-300 flex flex-col justify-between">
@@ -128,18 +133,47 @@ export default function MeshAI() {
 
       </div>
 
-  
+      {/* VIDEO SECTION 2: Deep Dive / Walkthrough */}
+      <div className="relative z-10 w-full max-w-5xl mx-auto mb-20 group px-6">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-bold uppercase tracking-widest text-[#8c52ff] mb-3">
+            <Tv className="w-3.5 h-3.5" /> MeshAI v0.1 
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            MeshAI Powered By Gemini 3.7
+          </h2>
+        </div>
+
+        {/* Glowing border effect behind video 2 */}
+        <div className="absolute inset-6 bg-gradient-to-r from-[#8c52ff] to-[#ff5757] rounded-[2.5rem] blur-xl opacity-20 group-hover:opacity-50 transition duration-1000 group-hover:duration-300"></div>
+        
+        {/* Video Container 2 */}
+        <div className="relative bg-[#050505] rounded-[2rem] border border-white/10 overflow-hidden shadow-2xl aspect-video flex items-center justify-center">
+          <video 
+            className="w-full h-full object-cover"
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            controls
+            /* poster="/mesh-ai-demo-thumbnail.jpg" */
+          >
+            {/* PUT YOUR SECOND VIDEO FILE IN "public" AND RENAME BELOW */}
+            <source src="/mesh-ai-demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
 
       {/* Footer */}
-   {/* Footer Neon Text */}
-      <footer className="border-t border-white/5 mt-20 pt-10 pb-6">
+      <footer className="border-t border-white/5 w-full mt-10 pt-10 pb-6">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
             © {new Date().getFullYear()} Mesh Services UK. <br className="md:hidden" />
             <span className="hidden md:inline"> | </span> 
             Run with purpose by Dylan Scully.
             <span className="hidden md:inline"> | </span>
-            For any questions regarding Mesh+, please contact <a href="mailto:it@meshservicesuk.com" className="text-[#ff5757] hover:underline">it@meshservicesuk.com</a>
+            For any questions regarding MeshAI, please contact <a href="mailto:it@meshservicesuk.com" className="text-[#ff5757] hover:underline">it@meshservicesuk.com</a>
           </div>
         </div>
       </footer>

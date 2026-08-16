@@ -10,6 +10,7 @@ import About from './pages/About';
 import MeshPlus from './pages/MeshPlus';
 import MeshAI from './pages/MeshAI';
 import Ourservices from './pages/Ourservices';
+import CustomerPortal from './pages/CustomerPortal';
 
 
 // Individual Service Information Pages
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/mesh-plus" element={<MeshPlus />} />
         <Route path="/mesh-ai" element={<MeshAI />} />
         <Route path="/submit-receipt" element={<SubmitReceipt />} />
+        <Route path="/customer-portal" element={<CustomerPortal />} />
 
         
         {/* Mesh AI Chat Workspace Route */}

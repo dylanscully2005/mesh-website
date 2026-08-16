@@ -43,6 +43,7 @@ export default function Navbar() {
     { name: 'How do we do it?', path: '/infrastructure' },
     { name: 'Payouts', path: '/payouts' },
     { name: 'Jobs', path: '/jobs' },
+    { name: 'Customer Portal', path: '/customer-portal' },
     { name: 'Support', path: '/support' },
     { name: 'Policies', path: '/policies' },
   ];

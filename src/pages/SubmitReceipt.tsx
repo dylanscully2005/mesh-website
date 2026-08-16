@@ -55,7 +55,7 @@ export default function SubmitReceipt() {
             </span>
           </h1>
           <p className="text-xs text-zinc-400 mt-1">
-            Submit your account info and transaction ID for activation
+            Submit your account info and receipt ID for activation
           </p>
         </div>
 
@@ -123,7 +123,7 @@ export default function SubmitReceipt() {
 
             <div>
               <label className="block text-xs font-bold text-zinc-400 mb-2 uppercase tracking-wider">
-                Transaction / Receipt ID
+                Receipt ID
               </label>
               <div className="relative">
                 <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-zinc-500">
@@ -149,7 +149,15 @@ export default function SubmitReceipt() {
             </button>
           </form>
         )}
-
+<p className="text-xs text-zinc-500 mt-4 text-center">
+          By submitting, you agree to our <a href="/policies" className="text-[#b857e6] hover:underline">Terms & Policies</a>. To find your receipt ID or transaction ID, check your email confirmation or payment receipt from the platform you purchased Mesh+ from.
+        </p>
+      </div>
+      <div className="text-xs text-zinc-600 mt-6 text-center">
+        © {new Date().getFullYear()} Mesh Services UK. All rights reserved.
+      </div>
+      <div className="text-xs text-zinc-600 mt-2 text-center">
+        For support, contact <a href="mailto:support@meshservices.com" className="text-[#b857e6] hover:underline">support@meshservices.com</a>
       </div>
     </div>
   );
