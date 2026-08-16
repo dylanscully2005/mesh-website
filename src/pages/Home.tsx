@@ -1,6 +1,6 @@
 // src/pages/Home.tsx
 import { Link } from 'react-router-dom';
-import { ArrowRight, Music, Tv, ShieldCheck, Code2, Coins, Globe, MapPin, User, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Tv, ShieldCheck, Coins, Globe, MapPin, User, Sparkles, Zap, Bot } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -29,34 +29,56 @@ export default function Home() {
             We were tired of algorithms dictating culture. Mesh Services UK provides the actual server infrastructure for independent artists and filmmakers. No compressed nonsense, no creepy tracking, and creators keep 70% of the cut.
           </p>
           
-          <div className="flex flex-wrap justify-center items-center gap-4">
-            <button className="px-6 py-3 bg-[#1800ad] text-white font-semibold rounded-xl hover:bg-[#290df2] hover:shadow-[0_0_30px_rgba(24,0,173,0.4)] transition-all flex items-center gap-2">
-              Explore the Network <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="px-6 py-3 bg-[#111] border border-white/10 text-white font-semibold rounded-xl hover:bg-[#1a1a1a] hover:border-white/20 transition-all flex items-center gap-2">
-              <Code2 className="w-4 h-4 text-zinc-500" /> Developer API
-            </button>
-          </div>
+         <div className="flex flex-wrap justify-center items-center gap-4">
+  {/* "Our Services" Button converted to a link */}
+  <a 
+    href="/ourservices" 
+    className="px-6 py-3 bg-[#1800ad] text-white font-semibold rounded-xl hover:bg-[#290df2] hover:shadow-[0_0_30px_rgba(24,0,173,0.4)] transition-all flex items-center gap-2 no-underline"
+  >
+    Our Services <ArrowRight className="w-4 h-4" />
+  </a>
+  
+  {/* "Mesh AI" Button styled with the signature theme gradient */}
+  <a 
+    href="/mesh-ai" 
+    className="px-6 py-3 bg-gradient-to-r from-[#ff5757] to-[#8c52ff] text-white font-semibold rounded-xl hover:opacity-90 hover:shadow-[0_0_30px_rgba(140,82,255,0.4)] transition-all flex items-center gap-2 no-underline"
+  >
+    <Bot className="w-4 h-4 text-white" /> Mesh AI
+  </a>
+</div>
         </div>
 
         {/* The Bento Grid - Expanded and redesigned */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4" id="platforms">
           
-          {/* Box 1: Music */}
-          <div className="md:col-span-2 group relative p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-[#1800ad]/50 overflow-hidden transition-all duration-300 flex flex-col justify-between min-h-[300px]">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#1800ad]/10 blur-[100px] rounded-full group-hover:bg-[#1800ad]/20 transition-colors"></div>
-            <div className="relative z-10">
-              <Music className="w-8 h-8 text-[#3b1df2] mb-4" />
-              <h3 className="text-2xl font-bold text-zinc-100 mb-2 tracking-tight">Mesh Music Hub</h3>
-              <p className="text-zinc-400 font-medium max-w-md leading-relaxed">
-                Stop letting standard streaming platforms ruin your masters. Upload your raw WAVs and FLACs directly. We serve your audio exactly how you mixed it in the studio.
-              </p>
-            </div>
-            <div className="relative z-10 mt-8 text-sm font-bold text-zinc-200 flex items-center gap-1 opacity-60 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 cursor-pointer">
-              Enter Hub <ArrowRight className="w-4 h-4" />
-            </div>
-          </div>
+<a 
+  href="/mesh-ai"
+  className="md:col-span-2 group relative p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-[#ff5757]/40 overflow-hidden transition-all duration-300 flex flex-col justify-between min-h-[300px] shadow-[0_0_30px_rgba(140,82,255,0.05)] hover:shadow-[0_0_40px_rgba(255,87,87,0.15)] no-underline block"
+>
+  {/* Ambient Theme Glow Background */}
+  <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#ff5757]/20 to-[#8c52ff]/25 blur-[120px] rounded-full group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+  
+  <div className="relative z-10">
+    {/* Theme Gradient Icon Box */}
+    <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-[#ff5757] to-[#8c52ff] flex items-center justify-center mb-6 shadow-lg shadow-[#8c52ff]/30">
+      <Bot className="w-6 h-6 text-white" />
+    </div>
 
+    <h3 className="text-2xl font-extrabold text-white mb-2 tracking-tight">
+      Mesh AI Beta v0.1
+    </h3>
+    
+    <p className="text-zinc-400 font-medium max-w-md leading-relaxed">
+      Your intelligent ecosystem assistant. Accelerate workflows, manage digital assets, and enhance your creative projects with next-generation AI automation built right in.
+    </p>
+  </div>
+
+  {/* Learn More Action with Theme Gradient */}
+  <div className="relative z-10 mt-8 text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#ff5757] to-[#8c52ff] flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0">
+    <span>Learn More</span> 
+    <ArrowRight className="w-4 h-4 text-[#8c52ff]" />
+  </div>
+</a>
           {/* Box 2: TV */}
           <div className="group relative p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-white/20 overflow-hidden transition-all duration-300 flex flex-col justify-between min-h-[300px]">
             <div>

@@ -11,6 +11,7 @@ import MeshPlus from './pages/MeshPlus';
 import MeshAI from './pages/MeshAI';
 import Ourservices from './pages/Ourservices';
 
+
 // Individual Service Information Pages
 import MeshAIService from './pages/mesh-ai';
 import MeshSocialApp from './pages/mesh-social-app';
@@ -24,6 +25,8 @@ import Studios from './pages/Studios';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
+import MeshAIchat from './pages/MeshAIchat';
+import SubmitReceipt from './pages/SubmitReceipt';
 
 export default function App() {
   return (
@@ -35,6 +38,13 @@ export default function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/mesh-plus" element={<MeshPlus />} />
         <Route path="/mesh-ai" element={<MeshAI />} />
+        <Route path="/submit-receipt" element={<SubmitReceipt />} />
+
+        
+        {/* Mesh AI Chat Workspace Route */}
+        <Route path="/mesh-ai-chat" element={<MeshAIchat />} />
+        <Route path="/MeshAIchat" element={<MeshAIchat />} />
+
         <Route path="/ourservices" element={<Ourservices />} />
         
         {/* Individual Service Information Routes */}
@@ -43,7 +53,6 @@ export default function App() {
         <Route path="/services/mesh-ai" element={<MeshAIService />} />
         <Route path="/services/mesh-social-app" element={<MeshSocialApp />} />
         <Route path="/services/Status" element={<StatusPage />} />
-        
         
         {/* Network Status Route */}
         <Route path="/status" element={<StatusPage />} />
