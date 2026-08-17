@@ -44,6 +44,7 @@ export default function Navbar() {
     { name: 'Payouts', path: '/payouts' },
     { name: 'Jobs', path: '/jobs' },
     { name: 'Customer Portal', path: '/customer-portal' },
+    { name: 'ThankYou', path: '/ThankYou' },
     { name: 'Support', path: '/support' },
     { name: 'Policies', path: '/policies' },
   ];

@@ -11,6 +11,7 @@ import MeshPlus from './pages/MeshPlus';
 import MeshAI from './pages/MeshAI';
 import Ourservices from './pages/Ourservices';
 import CustomerPortal from './pages/CustomerPortal';
+import ThankYou from "./pages/ThankYou"
 
 
 // Individual Service Information Pages
@@ -39,6 +40,7 @@ export default function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/mesh-plus" element={<MeshPlus />} />
         <Route path="/mesh-ai" element={<MeshAI />} />
+        <Route path="/ThankYou" element={<ThankYou/>} />
         <Route path="/submit-receipt" element={<SubmitReceipt />} />
         <Route path="/customer-portal" element={<CustomerPortal />} />
 
