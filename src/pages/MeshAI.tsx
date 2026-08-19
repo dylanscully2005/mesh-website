@@ -46,7 +46,7 @@ export default function MeshAI() {
       {/* VIDEO SECTION 1: Official Promo */}
       <div className="relative z-10 w-full max-w-5xl mx-auto mb-24 group px-6">
         <div className="flex items-center justify-center gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-zinc-500">
-          <Play className="w-3.5 h-3.5 text-[#ff5757]" /> Official Overview
+          <Play className="w-3.5 h-3.5 text-[#ff5757]" /> 01.09.2026 - Something big is coming...
         </div>
 
         {/* Glowing border effect behind video 1 */}
@@ -64,7 +64,7 @@ export default function MeshAI() {
             /* poster="/mesh-ai-thumbnail.jpg" */
           >
             {/* PUT YOUR FIRST VIDEO FILE IN "public" */}
-            <source src="/mesh-ai-promo.mp4" type="video/mp4" />
+            <source src="/MeshAIStandalone.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
