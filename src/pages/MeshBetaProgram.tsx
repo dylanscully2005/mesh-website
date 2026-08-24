@@ -1,6 +1,7 @@
 // src/pages/MeshBetaProgram.tsx
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { supabase } from '../lib/supabase';
 import { 
   Hexagon, 
   ArrowLeft, 
@@ -15,12 +16,17 @@ import {
   Building2, 
   Code2,
   MessageSquare,
-  Clock
+  Clock,
+  Loader2,
+  AlertCircle
 } from 'lucide-react';
 
 export default function MeshBetaProgram() {
   const [role, setRole] = useState<'artist' | 'listener' | 'label' | 'developer'>('artist');
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -32,10 +38,42 @@ export default function MeshBetaProgram() {
     agreeNDA: false,
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate submission
-    setSubmitted(true);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const { error: insertError } = await supabase
+        .from('beta_submissions')
+        .insert([
+          {
+            role: role,
+            full_name: formData.fullName,
+            email: formData.email,
+            link: formData.link,
+            platform_preference: formData.platform,
+            country: formData.country,
+            use_case: formData.reason,
+            agree_feedback: formData.agreeFeedback,
+            agree_nda: formData.agreeNDA,
+          },
+        ]);
+
+      if (insertError) {
+        if (insertError.code === '23505') {
+          throw new Error('This email address has already been submitted for beta access.');
+        }
+        throw insertError;
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error('Error submitting beta form:', err);
+      setError(err.message || 'Failed to submit application. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const roleOptions = [
@@ -133,7 +171,10 @@ export default function MeshBetaProgram() {
                 </p>
                 <div className="pt-4">
                   <button 
-                    onClick={() => setSubmitted(false)}
+                    onClick={() => {
+                      setSubmitted(false);
+                      setError(null);
+                    }}
                     className="text-sm font-semibold text-[#6042ff] hover:underline"
                   >
                     Submit another application
@@ -146,6 +187,13 @@ export default function MeshBetaProgram() {
                   <h2 className="text-2xl font-bold text-white mb-2">Apply for Beta Access</h2>
                   <p className="text-sm text-[#888]">Please fill out the form below. Slots are limited per phase.</p>
                 </div>
+
+                {error && (
+                  <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-sm flex items-center gap-2">
+                    <AlertCircle className="w-4 h-4 shrink-0" />
+                    <span>{error}</span>
+                  </div>
+                )}
 
                 {/* Role Selection */}
                 <div className="space-y-3">
@@ -287,9 +335,18 @@ export default function MeshBetaProgram() {
 
                 <button 
                   type="submit" 
-                  className="w-full bg-[#1800ad] hover:bg-[#6042ff] text-white font-bold py-4 px-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-[#1800ad]/25"
+                  disabled={loading}
+                  className="w-full bg-[#1800ad] hover:bg-[#6042ff] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-4 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-lg shadow-[#1800ad]/25"
                 >
-                  <Send className="w-4 h-4" /> Submit Beta Application
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" /> Submitting...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4" /> Submit Beta Application
+                    </>
+                  )}
                 </button>
               </form>
             )}
