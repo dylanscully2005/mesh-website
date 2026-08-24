@@ -1,4 +1,13 @@
-import { CreditCard, Receipt, ArrowLeft, ShieldCheck, Sparkles, ExternalLink } from 'lucide-react';
+import { 
+  CreditCard, 
+  Receipt, 
+  ArrowLeft, 
+  ShieldCheck, 
+  Sparkles, 
+  ExternalLink,
+  Building2,
+  Leaf
+} from 'lucide-react';
 
 // ==========================================
 // 🔗 STRIPE URL CONFIGURATION
@@ -36,7 +45,7 @@ export default function CustomerPortal() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex items-center justify-center p-6 z-10">
+      <main className="flex-1 flex items-center justify-center p-6 my-12 z-10">
         <div className="w-full max-w-lg">
           
           {/* Title Area */}
@@ -98,14 +107,90 @@ export default function CustomerPortal() {
 
           </div>
 
-          {/* Footer Note */}
-          <div className="text-center mt-10 text-xs text-zinc-600 flex items-center justify-center gap-2">
-            <ShieldCheck className="w-4 h-4" /> 
-            Subscriptions are securely managed by Stripe. We do not store your payment information.
-          </div>
-
         </div>
       </main>
+
+      {/* Structured Footer */}
+      <footer className="w-full border-t border-white/10 bg-[#050505]/80 backdrop-blur-xl mt-auto z-20">
+        <div className="max-w-6xl mx-auto px-6 py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-white/5">
+            
+            {/* Column 1: Subscription Provider */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-bold text-xs tracking-wider uppercase">
+                <Building2 className="w-4 h-4 text-[#ff4d6d] shrink-0" /> Service Provider
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                <span className="text-white font-semibold">Mesh Global Services</span> is the official subscription provider, managing and delivering all Mesh+ platform features, software access, and direct customer support.
+              </p>
+            </div>
+
+            {/* Column 2: Payment Provider & Reseller */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-bold text-xs tracking-wider uppercase">
+                <CreditCard className="w-4 h-4 text-[#b857e6] shrink-0" /> Billing & Distribution
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                <span className="text-white font-semibold">Stripe & OneLink</span> process payments securely and serve as our digital reseller platform for order fulfillment, licensing, and compliance.
+              </p>
+              <a 
+                href="https://support.onelink.com/topics/sold-through-onelink" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-xs text-[#b857e6] hover:underline font-semibold flex items-center gap-1 mt-1"
+              >
+                <span>OneLink Sales Policies</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+
+            {/* Column 3: Sustainability Commitment */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs tracking-wider uppercase">
+                <Leaf className="w-4 h-4 shrink-0" /> Carbon Removal
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                We contribute <span className="text-white font-semibold">1.5% of profits</span> to certified climate programs specifically engineered to remove CO₂ permanently from the atmosphere.
+              </p>
+            </div>
+
+            {/* Column 4: Support & Security */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2 text-white font-bold text-xs tracking-wider uppercase">
+                <ShieldCheck className="w-4 h-4 text-blue-400 shrink-0" /> Support & Data
+              </div>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                Payment details are handled externally by Stripe; we never store card numbers. For assistance, contact:
+              </p>
+              <a 
+                href="mailto:subscriptions@meshservicesuk.com" 
+                className="text-xs text-[#ff4d6d] hover:underline font-medium break-all"
+              >
+                subscriptions@meshservicesuk.com
+              </a>
+            </div>
+
+          </div>
+
+          {/* Footer Copyright & Links */}
+          <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-medium">
+            <div>
+              © {new Date().getFullYear()} Mesh Global Services / Mesh Services UK. All rights reserved.
+            </div>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://support.onelink.com/topics/sold-through-onelink" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-zinc-300 transition-colors flex items-center gap-1.5"
+              >
+                <span>Sold Through OneLink Policy</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     </div>
   );

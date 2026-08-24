@@ -10,7 +10,11 @@ import {
   WifiOff, 
   Bot, 
   Sparkles,
-  ArrowRight
+  ArrowRight,
+  Leaf,
+  ExternalLink,
+  ShieldCheck,
+  Building2
 } from 'lucide-react';
 
 export default function MeshPlus() {
@@ -45,6 +49,10 @@ export default function MeshPlus() {
             <h2 className="text-3xl font-bold text-white tracking-tight mb-2">
               Mesh Standard
             </h2>
+            <div className="mt-3 mb-2 flex items-baseline">
+              <span className="text-4xl font-extrabold text-white">£0</span>
+              <span className="text-[#a6a6a6] font-medium text-sm ml-2">/ forever</span>
+            </div>
             <p className="text-[#a6a6a6] font-medium">The essential tools for everyday creators.</p>
           </div>
           
@@ -108,6 +116,22 @@ export default function MeshPlus() {
                   </button>
                 </div>
               </div>
+
+              {/* Dynamic Price Display */}
+              <div className="mt-3 mb-2 flex items-baseline gap-2">
+                <span className="text-4xl font-extrabold text-white">
+                  {billingCycle === 'monthly' ? '£4.99' : '£49.99'}
+                </span>
+                <span className="text-zinc-400 font-medium text-sm">
+                  / {billingCycle === 'monthly' ? 'month' : 'year'}
+                </span>
+                {billingCycle === 'annual' && (
+                  <span className="ml-2 text-xs bg-[#ff5757]/20 text-[#ff7575] border border-[#ff5757]/30 px-2 py-0.5 rounded-full font-bold">
+                    Save ~16%
+                  </span>
+                )}
+              </div>
+
               <p className="text-[#a6a6a6] font-medium text-sm">The ultimate, unrestricted experience.</p>
             </div>
             
@@ -140,7 +164,7 @@ export default function MeshPlus() {
               rel="noopener noreferrer"
               className="w-full bg-gradient-to-r from-[#ff5757] to-[#8c52ff] text-white font-bold text-lg py-4 px-8 rounded-full transition-all duration-300 group-hover:opacity-90 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.4)] [text-shadow:0_0_10px_rgba(255,255,255,0.8)] flex items-center justify-center gap-2 text-center"
             >
-              <span>Subscribe ({billingCycle === 'monthly' ? 'Monthly' : 'Annual'})</span>
+              <span>Subscribe ({billingCycle === 'monthly' ? '£4.99/mo' : '£49.99/yr'})</span>
               <ArrowRight className="w-5 h-5" />
             </a>
           </div>
@@ -148,15 +172,80 @@ export default function MeshPlus() {
 
       </div>
 
-      {/* Footer Neon Text */}
-      <footer className="border-t border-white/5 mt-20 pt-10 pb-6 w-full">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-zinc-600 font-medium text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Mesh Services UK. <br className="md:hidden" />
-            <span className="hidden md:inline"> | </span> 
-             Payments are securely processed by Stripe, we do not store your payment information. <br className="md:hidden" />
-            <span className="hidden md:inline"> | </span>
-            For any questions regarding Mesh+, please contact (to cancel head to the Customer Portal) <a href="mailto:subscriptions@meshservicesuk.com" className="text-[#ff5757] hover:underline">subscriptions@meshservicesuk.com.</a>
+      {/* Modern 4-Column Footer */}
+      <footer className="border-t border-white/10 mt-20 pt-12 pb-8 w-full max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-white/5">
+          
+          {/* Column 1: Secure Processing */}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 text-white font-bold text-xs tracking-wider uppercase">
+              <ShieldCheck className="w-4 h-4 text-[#8c52ff] shrink-0" /> Secure Billing
+            </div>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              Payments are securely processed by Stripe. Mesh Services UK does not store or have direct access to your payment card details.
+            </p>
+          </div>
+
+          {/* Column 2: OneLink Platform Details & Policies */}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 text-white font-bold text-xs tracking-wider uppercase">
+              <Building2 className="w-4 h-4 text-[#ff5757] shrink-0" /> About OneLink
+            </div>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              OneLink acts as our official digital distributor and reseller partner, managing licensing and fulfillment for Mesh subscriptions.
+            </p>
+            <a 
+              href="https://support.onelink.com/topics/sold-through-onelink" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-xs text-[#ff5757] hover:underline font-semibold flex items-center gap-1 mt-1"
+            >
+              <span>OneLink Sales Policies</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+
+          {/* Column 3: Carbon Removal Initiative */}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 text-emerald-400 font-bold text-xs tracking-wider uppercase">
+              <Leaf className="w-4 h-4 shrink-0" /> Carbon Removal
+            </div>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              We donate <span className="text-white font-semibold">1.5% of all profits</span> to vetted environmental initiatives dedicated to removing CO₂ from the atmosphere.
+            </p>
+          </div>
+
+          {/* Column 4: Customer Support & Portal */}
+          <div className="flex flex-col gap-2">
+            <span className="text-white font-bold text-xs tracking-wider uppercase">Subscription Help</span>
+            <p className="text-xs text-zinc-400 leading-relaxed">
+              To update card details or cancel your subscription, access the Customer Portal. For support, email us at:
+            </p>
+            <a 
+              href="mailto:subscriptions@meshservicesuk.com" 
+              className="text-xs text-[#ff5757] hover:underline font-medium break-all"
+            >
+              subscriptions@meshservicesuk.com
+            </a>
+          </div>
+
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-medium">
+          <div>
+            © {new Date().getFullYear()} Mesh Services UK. All rights reserved.
+          </div>
+          <div className="flex items-center gap-4">
+            <a 
+              href="https://support.onelink.com/topics/sold-through-onelink" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-zinc-300 transition-colors flex items-center gap-1.5"
+            >
+              <span>Sold Through OneLink Policy</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
           </div>
         </div>
       </footer>

@@ -40,7 +40,7 @@ export default function Policies() {
         {/* Content Area */}
         <div className="flex-1 max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-white mb-4">Platform Policies & Legal Documentation</h1>
-          <p className="text-[#888] mb-12">Updated September 2026</p>
+          <p className="text-[#888] mb-12">Updated August 2026</p>
 
           {/* Section: Terms of Service */}
           <section id="terms" className="mb-16 scroll-mt-32">
@@ -84,11 +84,11 @@ export default function Policies() {
               <ShieldCheck className="w-5 h-5 text-[#3b1df2]" />
               <h2 className="text-2xl font-bold text-white">UK & EU Privacy Policy</h2>
             </div>
-            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 4/09/2026</p>
+            <p className="text-xs text-[#888] uppercase tracking-wider mb-6">Effective Date: 4/08/2026</p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">1. Who We Are</h3>
             <p className="text-[#888] leading-relaxed mb-4">
-              Mesh Services UK and EU is operated by Dylan Scully trading as "Mesh," United Kingdom. Contact us about privacy at Legal@meshservicesuk.com. Our ICO Registration Number is ZC218381.
+              Mesh Services UK and EU is operated by Dylan Scully trading as "Mesh," United Kingdom. Contact us about privacy at Legal@meshservicesuk.com.
             </p>
 
             <h3 className="text-lg font-bold text-white mt-6 mb-2">2. What Mesh Is</h3>

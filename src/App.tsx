@@ -12,6 +12,7 @@ import MeshAI from './pages/MeshAI';
 import Ourservices from './pages/Ourservices';
 import CustomerPortal from './pages/CustomerPortal';
 import ThankYou from "./pages/ThankYou"
+import MeshBetaProgram from './pages/MeshBetaProgram';
 
 
 // Individual Service Information Pages
@@ -43,8 +44,8 @@ export default function App() {
         <Route path="/ThankYou" element={<ThankYou/>} />
         <Route path="/submit-receipt" element={<SubmitReceipt />} />
         <Route path="/customer-portal" element={<CustomerPortal />} />
+        <Route path="/beta" element={<MeshBetaProgram />} />
 
-        
         {/* Mesh AI Chat Workspace Route */}
         <Route path="/mesh-ai-chat" element={<MeshAIchat />} />
         <Route path="/MeshAIchat" element={<MeshAIchat />} />
