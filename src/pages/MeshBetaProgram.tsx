@@ -14,7 +14,6 @@ import {
   Headphones, 
   Building2, 
   Code2,
-  Lock,
   MessageSquare,
   Clock
 } from 'lucide-react';
