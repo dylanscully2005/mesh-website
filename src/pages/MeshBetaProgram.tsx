@@ -360,7 +360,7 @@ export default function MeshBetaProgram() {
             Applications are evaluated continuously. Invites sent out via email. Mesh Services UK Beta Program is currently only available to users in the united kingdom.
           </div>
           <p className="text-xs text-zinc-600">
-            Have questions about the beta process? Contact our support team at <a href="mailto:support@meshservicesuk.com" className="text-zinc-400 underline">support@meshservicesuk.com</a>.
+            Have questions about the beta process? Contact our support team at <a href="mailto:applications@meshbetaprogram.co.uk" className="text-zinc-400 underline">applications@meshbetaprogram.co.uk</a>.
           </p>
         </div>
 
