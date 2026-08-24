@@ -14,7 +14,6 @@ import {
   CheckCircle2, 
   Copy, 
   Check, 
-  MessageSquare,
   HelpCircle,
   ExternalLink,
   Zap
@@ -311,12 +310,6 @@ export default function BusinessContacts() {
         </div>
 
         {/* Discord & Community Note */}
-        <div className="mt-16 text-center max-w-xl mx-auto space-y-2">
-          <div className="flex items-center justify-center gap-2 text-[#888] text-sm font-medium">
-            <MessageSquare className="w-4 h-4 text-[#6042ff]" />
-            Need instant community assistance? Join our official Discord server for real-time community chat and support.
-          </div>
-        </div>
 
       </main>
 
