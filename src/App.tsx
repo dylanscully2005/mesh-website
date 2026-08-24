@@ -30,6 +30,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
 import MeshAIchat from './pages/MeshAIchat';
 import SubmitReceipt from './pages/SubmitReceipt';
+import BusinessContacts from './pages/BusinessContacts';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/submit-receipt" element={<SubmitReceipt />} />
         <Route path="/customer-portal" element={<CustomerPortal />} />
         <Route path="/beta" element={<MeshBetaProgram />} />
+        <Route path="/business-contacts" element={<BusinessContacts />} />
 
         {/* Mesh AI Chat Workspace Route */}
         <Route path="/mesh-ai-chat" element={<MeshAIchat />} />

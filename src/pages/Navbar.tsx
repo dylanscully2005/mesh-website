@@ -45,6 +45,7 @@ export default function Navbar() {
     { name: 'Jobs', path: '/jobs' },
     { name: 'Customer Portal', path: '/customer-portal' },
     { name: 'Beta Program', path: '/beta' },
+    { name: 'Business Contacts', path: '/business-contacts' },
     { name: 'Support', path: '/support' },
     { name: 'Policies', path: '/policies' },
   ];
