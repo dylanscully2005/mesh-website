@@ -10,13 +10,24 @@ import {
   User, 
   Sparkles, 
   Zap, 
-  Bot 
+  Bot,
+  Lock // Added for the Admin Dashboard button
 } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#050505] text-zinc-300 font-sans selection:bg-[#1800ad] selection:text-white pb-20 relative">
-      
+
+      {/* Admin Dashboard Button (Top Right) */}
+      <div className="absolute top-6 right-6 md:top-8 md:right-8 z-50">
+        <Link 
+          to="/admin" 
+          className="flex items-center gap-2 px-4 py-2 bg-zinc-900/50 border border-white/10 text-zinc-400 hover:text-white hover:bg-white/10 rounded-xl text-xs font-bold uppercase tracking-wider transition-all backdrop-blur-md shadow-lg hover:shadow-white/5"
+        >
+          <Lock className="w-3.5 h-3.5" /> Admin Console
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <main className="pt-32 px-6 max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mt-16 mb-24">
@@ -190,7 +201,7 @@ export default function Home() {
 
           {/* Box 8: Pro Pre-Sign Up */}
           <div className="group relative p-8 rounded-3xl bg-gradient-to-b from-[#1800ad]/20 to-zinc-900/30 border border-[#1800ad]/30 hover:border-[#3b1df2]/60 transition-all duration-300 flex flex-col justify-between min-h-[260px] overflow-hidden">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-[#3b1df2]/10 blur-[60px] rounded-full pointer-events-none group-hover:bg-[#3b1df2]/20 transition-colors"></div>
+            <div className="absolute top-0 right-0 w-48 h-[#3b1df2]/10 blur-[60px] rounded-full pointer-events-none group-hover:bg-[#3b1df2]/20 transition-colors"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
                 <Sparkles className="w-8 h-8 text-[#3b1df2]" />

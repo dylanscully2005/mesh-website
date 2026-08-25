@@ -31,6 +31,7 @@ import NotFound from './pages/NotFound';
 import MeshAIchat from './pages/MeshAIchat';
 import SubmitReceipt from './pages/SubmitReceipt';
 import BusinessContacts from './pages/BusinessContacts';
+import Updates from './pages/Updates';
 
 export default function App() {
   return (
@@ -40,6 +41,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
+        <Route path="/updates" element={<Updates />} />
         <Route path="/mesh-plus" element={<MeshPlus />} />
         <Route path="/mesh-ai" element={<MeshAI />} />
         <Route path="/ThankYou" element={<ThankYou/>} />
