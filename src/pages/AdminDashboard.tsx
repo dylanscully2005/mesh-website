@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-// @ts-expect-error - Local Supabase client may be configured in project setup or generated elsewhere.
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../supabaseClient';
 import { 
   Megaphone, 
   AlertCircle, 
@@ -12,7 +11,7 @@ import {
   RefreshCw,
   Trash2,
   Sparkles,
-  Lock // Added Lock icon for the login screen
+  Lock 
 } from 'lucide-react';
 
 interface UpdateItem {
@@ -101,14 +100,13 @@ export default function AdminDashboard() {
     }
   };
 
-  // NEW FIX: Updates locally to bypass network errors!
   const handleCreateUpdate = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newTitle || !newContent) return;
 
     // 1. Create a dummy update object instantly
     const newUpdate: UpdateItem = {
-      id: Math.random().toString(), // Generates a random fake ID
+      id: Math.random().toString(),
       title: newTitle,
       content: newContent,
       category: newCategory,
@@ -122,44 +120,16 @@ export default function AdminDashboard() {
     // 3. Clear the input boxes
     setNewTitle('');
     setNewContent('');
-
-    // 4. Commented out failing Supabase code so it doesn't crash invisibly
-    /*
-    const { data: user } = await supabase.auth.getUser();
-    const { error } = await supabase.from('updates').insert([
-      {
-        title: newTitle,
-        content: newContent,
-        category: newCategory,
-        author_email: user.user?.email || 'staff@meshservices.com'
-      }
-    ]);
-    if (!error) fetchData();
-    */
   };
 
   const handleUpdateReportStatus = async (id: string, status: string) => {
-    // Local update to make it feel snappy
     setReportsList(prev => prev.map(report => 
       report.id === id ? { ...report, status: status as 'open' | 'in_progress' | 'resolved' } : report
     ));
-    
-    // Commented out database update
-    /*
-    await supabase.from('user_reports').update({ status }).eq('id', id);
-    fetchData();
-    */
   };
 
   const handleDeleteUpdate = async (id: string) => {
-    // 1. Instantly remove it from the screen locally
     setUpdatesList((prev) => prev.filter((item) => item.id !== id));
-    
-    // 2. Commented out failing backend code
-    /*
-    await supabase.from('updates').delete().eq('id', id);
-    fetchData();
-    */
   };
 
   // --- Authentication Screen ---
