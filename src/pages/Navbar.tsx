@@ -33,7 +33,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/Home' },
     { name: 'Updates', path: '/updates' },
-    { name: "Admin", path: '/admin' },
+    { name: 'Admin', path: '/admin' },
+    { name: 'Mesh Social App', path: '/mesh' }, // <-- Updated Path and Name Here
     { name: 'Mesh+', path: '/mesh-plus' },
     { name: 'MeshAI', path: '/mesh-ai' },
     { name: 'MeshAI Chat', path: '/MeshAIchat' },

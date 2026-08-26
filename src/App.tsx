@@ -11,13 +11,12 @@ import MeshPlus from './pages/MeshPlus';
 import MeshAI from './pages/MeshAI';
 import Ourservices from './pages/Ourservices';
 import CustomerPortal from './pages/CustomerPortal';
-import ThankYou from "./pages/ThankYou"
+import ThankYou from "./pages/ThankYou";
 import MeshBetaProgram from './pages/MeshBetaProgram';
-
 
 // Individual Service Information Pages
 import MeshAIService from './pages/mesh-ai';
-import MeshSocialApp from './pages/mesh-social-app';
+import MeshSocialApp from './pages/MeshSocialApp'; // <-- This imports the page we just built
 import StatusPage from './pages/StatusPage';
 import MeshMusic from './pages/music';
 import MeshTV from './pages/tv';
@@ -42,6 +41,11 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/updates" element={<Updates />} />
+        
+        {/* --- Mesh Social App Routes --- */}
+        <Route path="/mesh" element={<MeshSocialApp />} />
+        <Route path="/services/mesh-social-app" element={<MeshSocialApp />} />
+        
         <Route path="/mesh-plus" element={<MeshPlus />} />
         <Route path="/mesh-ai" element={<MeshAI />} />
         <Route path="/ThankYou" element={<ThankYou/>} />
@@ -60,7 +64,6 @@ export default function App() {
         <Route path="/services/music" element={<MeshMusic />} />
         <Route path="/services/tv" element={<MeshTV />} />
         <Route path="/services/mesh-ai" element={<MeshAIService />} />
-        <Route path="/services/mesh-social-app" element={<MeshSocialApp />} />
         <Route path="/services/Status" element={<StatusPage />} />
         
         {/* Network Status Route */}
