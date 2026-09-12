@@ -40,12 +40,12 @@ export default function Home() {
           </div>
           
           <h1 className="text-5xl md:text-[72px] font-extrabold tracking-tighter mb-6 leading-[1.05] text-white max-w-4xl">
-            Building a better web <br />
+            Building a better social media platform. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-400 to-[#1800ad]">for independent creators.</span>
           </h1>
           
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto mb-10 font-medium leading-relaxed">
-            We were tired of algorithms dictating culture. Mesh Services UK provides the actual server infrastructure for independent artists and filmmakers. No compressed nonsense, no creepy tracking, and creators keep 70% of the cut.
+           We were tired of Big Corps selling data off to advertisers or third parties. Mesh is a new kind of social media platform that puts creators first, giving them the tools to build their own communities and monetize their content without middlemen.
           </p>
           
           <div className="flex flex-wrap justify-center items-center gap-4">
@@ -83,11 +83,11 @@ export default function Home() {
               </div>
 
               <h3 className="text-2xl font-extrabold text-white mb-2 tracking-tight">
-                Mesh AI Beta v0.1
+                Mesh AI Is Out Now!
               </h3>
               
               <p className="text-zinc-400 font-medium max-w-md leading-relaxed">
-                Your intelligent ecosystem assistant. Accelerate workflows, manage digital assets, and enhance your creative projects with next-generation AI automation built right in.
+                Mesh AI is a powerful AI assistant that can help you with a variety of tasks, from generating content to answering questions. It's designed to be your personal AI companion, helping you get things done faster and more efficiently.
               </p>
             </div>
 

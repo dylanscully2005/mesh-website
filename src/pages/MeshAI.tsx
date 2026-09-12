@@ -24,7 +24,7 @@ export default function MeshAI() {
         {/* Exclusive Badge */}
         <div className="px-4 py-1.5 rounded-full border border-[#8c52ff]/30 bg-gradient-to-r from-[#ff5757]/10 to-[#8c52ff]/10 text-white text-xs font-bold tracking-widest uppercase mb-8 flex items-center gap-2 shadow-[0_0_20px_rgba(140,82,255,0.2)]">
           <Sparkles className="w-3 h-3 text-[#ff5757]" />
-          Exclusive to Mesh+ Subscribers
+          Subscribe to Mesh+ for Unlimited Access to Mesh AI in Mesh Social App or MeshAI App.
         </div>
         
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-[1.05] text-white">
@@ -46,7 +46,7 @@ export default function MeshAI() {
       {/* VIDEO SECTION 1: Official Promo */}
       <div className="relative z-10 w-full max-w-5xl mx-auto mb-24 group px-6">
         <div className="flex items-center justify-center gap-2 mb-4 text-xs font-bold uppercase tracking-widest text-zinc-500">
-          <Play className="w-3.5 h-3.5 text-[#ff5757]" /> 01.09.2026 - Something big is coming...
+          <Play className="w-3.5 h-3.5 text-[#ff5757]" /> Mesh AI is Out Now! <span className="text-zinc-600">|</span> Watch the Official Promo
         </div>
 
         {/* Glowing border effect behind video 1 */}
@@ -80,10 +80,10 @@ export default function MeshAI() {
             <div className="w-14 h-14 rounded-2xl bg-[#ff5757]/10 flex items-center justify-center mb-6 border border-[#ff5757]/20">
               <History className="w-7 h-7 text-[#ff5757]" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Instant Channel "Catch Me Up"</h3>
-            <p className="text-[#ff5757] font-semibold mb-4 text-sm tracking-wide uppercase">The Pitch: Never scroll through 500 unread messages again.</p>
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Complete Privacy Control</h3>
+            <p className="text-[#ff5757] font-semibold mb-4 text-sm tracking-wide uppercase">Control Your Data Using Our AI to protect it.</p>
             <p className="text-zinc-400 font-medium leading-relaxed">
-              Allows users to instantly generate a clean, bulleted summary of everything they missed in a channel while they were offline, at school, or asleep. Just type <code className="bg-white/10 px-2 py-0.5 rounded text-white font-mono text-sm">/mesh catchup</code>.
+              Our AI helps you manage your data privacy settings and ensures that your information is protected at all times, Using Mesh AI you can see what we store of your data and where it is held! 
             </p>
           </div>
         </div>
@@ -95,10 +95,10 @@ export default function MeshAI() {
             <div className="w-14 h-14 rounded-2xl bg-[#8c52ff]/10 flex items-center justify-center mb-6 border border-[#8c52ff]/20">
               <Brain className="w-7 h-7 text-[#8c52ff]" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">The Server Knowledge Oracle</h3>
-            <p className="text-[#8c52ff] font-semibold mb-4 text-sm tracking-wide uppercase">The Pitch: Your server's entire history, instantly searchable.</p>
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">MeshAI can Help you code!</h3>
+            <p className="text-[#8c52ff] font-semibold mb-4 text-sm tracking-wide uppercase">Mesh AI for Developers</p>
             <p className="text-zinc-400 font-medium leading-relaxed">
-              Let users ask Mesh AI complex questions about the specific server (e.g., "What are the entry requirements for the tournament?" or "Where is the asset pack dropped yesterday?") and get precise answers drawn straight from server logs or pinned documents.
+              Mesh AI can help you code faster and more efficiently by providing intelligent suggestions and automating repetitive tasks, This is an exclusive Version for Developers if you would like access to this please contact us at <a href="mailto:support@meshservicesuk.com" className="text-[#ff5757] hover:underline">support@meshservicesuk.com</a>
             </p>
           </div>
         </div>
@@ -109,8 +109,8 @@ export default function MeshAI() {
             <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 border border-white/10">
               <Wand2 className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">Smart Drafting & Assistance</h3>
-            <p className="text-zinc-300 font-semibold mb-4 text-sm tracking-wide uppercase">The Pitch: An intelligent co-pilot built directly into your chat.</p>
+            <h3 className="text-2xl font-bold text-white mb-3 tracking-tight">MeshAI Smart Drafting</h3>
+            <p className="text-zinc-300 font-semibold mb-4 text-sm tracking-wide uppercase">An intelligent co-pilot built directly into your chat.</p>
             <p className="text-zinc-400 font-medium leading-relaxed">
               Helps users rewrite text, instantly translate foreign language messages in international servers, or draft long explanations on the fly without ever leaving the Mesh interface.
             </p>

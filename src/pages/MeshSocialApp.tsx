@@ -357,7 +357,7 @@ export default function MeshSocialApp() {
               </div>
               <h2 className="text-3xl font-extrabold">Mesh AI Companion Bot</h2>
               <p className="text-zinc-400 text-xs md:text-sm mt-1">
-                Powered by <span className="text-white font-bold">Gemini 3.5 Flash</span>. Scheduled for full v1.0 release on <span className="text-[#ff4d6d] font-bold">10/09/26</span>.
+                Powered by <span className="text-white font-bold">Gemini 3.5 Flash</span>. Is out now <span className="text-[#ff4d6d] font-bold"> and available</span>.
               </p>
             </div>
           </div>
